@@ -1,0 +1,28 @@
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.marquee__inner {
+  display: inline-flex;
+  animation: marquee 20s linear infinite;
+}
+
+.marquee__inner span {
+  margin-right: 2rem;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Libre Baskerville", serif;
+  color: #961B1E;
+}
