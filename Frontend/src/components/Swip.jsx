@@ -22,7 +22,7 @@ export default function Swip() {
           <img
             src={vectorImg}
             alt="Vector"
-            className="absolute w-[1035.99px] h-[1078.64px] object-contain"
+            className="absolute w-[1000.99px] h-[1078.64px] object-contain"
           />
           {/* Mobile GIF */}
           <img

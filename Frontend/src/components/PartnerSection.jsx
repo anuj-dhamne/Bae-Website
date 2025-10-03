@@ -24,10 +24,8 @@ const PartnerSection = () => {
         <div className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left max-w-2xl px-6 lg:px-12">
           {/* Title */}
           <h2
-            className="font-serif italic text-[#961B1E] leading-tight whitespace-nowrap"
-            style={{
-              fontSize: "clamp(36px, 6vw, 90px)",
-            }}
+            className="font-serif italic text-[100px]  text-[#961B1E] leading-tight whitespace-nowrap"
+            style={{ fontFamily: "Instrument Serif, serif" }}
           >
             Partner with Us
           </h2>

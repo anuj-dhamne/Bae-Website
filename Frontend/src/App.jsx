@@ -8,6 +8,7 @@ import Footer from './components/Footer'
 import MarqueeTest from './components/MarqueeTest'
 import Swip from './components/Swip'
 import FashionBot from './components/FashionBot'
+import MeetBae from './components/MeetBae'
 
 function App() {
 
@@ -15,8 +16,9 @@ function App() {
     <>
      <HeroSection/>
      <Section2/>
+     <MeetBae/>
      <Swip/>
-     {/* <FashionBot/> */}
+     <FashionBot/>
      <PartnerSection/>
      <FounderSection/>
      <Footer/>
