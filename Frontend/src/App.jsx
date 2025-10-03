@@ -6,6 +6,8 @@ import PartnerSection from './components/PartnerSection'
 import FounderSection from './components/FounderSection'
 import Footer from './components/Footer'
 import MarqueeTest from './components/MarqueeTest'
+import Swip from './components/Swip'
+import FashionBot from './components/FashionBot'
 
 function App() {
 
@@ -13,6 +15,8 @@ function App() {
     <>
      <HeroSection/>
      <Section2/>
+     <Swip/>
+     {/* <FashionBot/> */}
      <PartnerSection/>
      <FounderSection/>
      <Footer/>
