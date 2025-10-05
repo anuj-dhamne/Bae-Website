@@ -32,12 +32,12 @@ const HeroSection = () => {
         {/* Buttons */}
         <div className="flex space-x-2 md:space-x-3">
           {/* Join Waitlist */}
-          <button className="w-[150px] md:w-[205.21px] h-[48px] md:h-[64px] rounded-full bg-[#961B1E] text-white font-medium hover:bg-[#65493B] transition">
+          <button className="w-[150px] md:w-[205.21px] h-[48px] md:h-[64px] rounded-full bg-[#961B1E] text-white font-medium hover:bg-[#65493B] transition text-[19.93px]  ">
             Join waitlist
           </button>
 
           {/* Partner With Us */}
-          <button className="w-[160px] md:w-[219.43px] h-[48px] md:h-[64px] rounded-full bg-[#3C2F2F] text-white font-medium hover:bg-[#2a2020] transition">
+          <button className="w-[160px] md:w-[219.43px] h-[48px] md:h-[64px] rounded-full bg-[#3C2F2F] text-white font-medium hover:bg-[#2a2020] transition text-[19.93px] ">
             Partner with us
           </button>
         </div>
