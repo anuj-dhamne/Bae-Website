@@ -16,24 +16,28 @@ import model6 from "../assets/model1.png";
 import model7 from "../assets/model1.png";
 
 // Typing animation hook
-const useTypingEffect = (text, speed = 50) => {
+const useTypingEffect = (text, speed = 50, start = false) => {
   const [displayed, setDisplayed] = useState("");
+
   useEffect(() => {
+    if (!start) return; // Only start typing when start = true
+
     let i = 0;
     const interval = setInterval(() => {
       setDisplayed((prev) => prev + text.charAt(i));
       i++;
       if (i >= text.length) clearInterval(interval);
     }, speed);
+
     return () => clearInterval(interval);
-  }, [text, speed]);
+  }, [text, speed, start]);
+
   return displayed;
 };
 
 export default function FashionBot() {
   const text =
-    "Here are a few college outfit recommendations tailored to flatter your body type and aesthetics.";
-  const typedText = useTypingEffect(text, 40);
+    "HHere are a few college outfit recommendations tailored to flatter your body type and aesthetics.";
 
   const [step, setStep] = useState(0);
   const { ref, inView } = useInView({
@@ -41,12 +45,14 @@ export default function FashionBot() {
     triggerOnce: true,
   });
 
-  // Start animation sequence
+  const typedText = useTypingEffect(text, 40, inView); // Start typing only when in view
+
+  // Start chat message animation sequence
   useEffect(() => {
     if (inView) {
       setTimeout(() => setStep(1), 300); // msg1 appears
-      setTimeout(() => setStep(2), 1300); // msg2 slides up, msg2 appears
-      setTimeout(() => setStep(3), 2300); // msg3 slides up, msg3 appears
+      setTimeout(() => setStep(2), 1300); // msg2 appears
+      setTimeout(() => setStep(3), 2300); // msg3 appears
     }
   }, [inView]);
 
@@ -56,7 +62,7 @@ export default function FashionBot() {
       className="w-screen h-screen overflow-hidden bg-gradient-to-b from-[#FFFFE6] to-[#FFCDD9] flex flex-col justify-between"
     >
       {/* Top Section */}
-      <div className="flex justify-between px-24 pt-12">
+      <div className="flex justify-between items-end px-24 pt-12">
         {/* Left Title */}
         <div className="max-w-[800px]">
           <h1 className="font-[Instrument_Serif] text-[#961B1E] text-[90px] leading-none">
@@ -65,15 +71,16 @@ export default function FashionBot() {
             <span className="text-[90px] not-italic">BOT</span>
           </h1>
           <p className="font-[DM_Sans] text-[#543B2E] text-[25px] mt-6">
-            From celeb looks to daily outfits, get instant style advice. Your
-            fashion BFF whenever you’re stuck.
+            From celeb looks to daily outfits, get instant style
+            <br />
+            advice. Your fashion BFF whenever you’re stuck.
           </p>
         </div>
 
         {/* Chat Section */}
-        <div className="relative w-[600px] h-[280px] flex justify-end items-end">
+        <div className="relative w-[600px] h-[280px] flex justify-start items-end">
           {/* Static DP */}
-          <div className="absolute bottom-0 right-0 z-10">
+          <div className="z-10 mb-[20px]">
             <img
               src={profilePic}
               alt="profile"
@@ -82,20 +89,16 @@ export default function FashionBot() {
           </div>
 
           {/* Chat Messages Container */}
-          <div className="absolute bottom-[80px] right-[70px] flex flex-col items-end justify-end h-[180px] w-[450px] overflow-visible mb-3">
+          <div className="ml-4 flex flex-col items-start justify-end gap-3 h-[180px] w-[450px] overflow-visible mb-[20px]">
             {/* msg1 */}
             {step >= 1 && (
               <motion.img
                 src={msg1}
                 alt="msg1"
                 initial={{ y: 40, opacity: 0, scale: 0.9 }}
-                animate={{
-                  y: step >= 2 ? -140 : 0,
-                  opacity: 1,
-                  scale: 1,
-                }}
+                animate={{ y: 0, opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                className="absolute bottom-0 right-0 w-[400px] h-[70px]"
+                className="w-[400px] h-[70px]"
               />
             )}
 
@@ -105,13 +108,9 @@ export default function FashionBot() {
                 src={msg2}
                 alt="msg2"
                 initial={{ y: 40, opacity: 0, scale: 0.9 }}
-                animate={{
-                  y: step >= 3 ? -70 : 0,
-                  opacity: 1,
-                  scale: 1,
-                }}
+                animate={{ y: 0, opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                className="absolute bottom-0 right-0 w-[440px] h-[70px]"
+                className="w-[440px] h-[70px]"
               />
             )}
 
@@ -123,7 +122,7 @@ export default function FashionBot() {
                 initial={{ y: 40, opacity: 0, scale: 0.9 }}
                 animate={{ y: 0, opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                className="absolute bottom-0 right-0 w-[420px] h-[70px]"
+                className="w-[420px] h-[70px]"
               />
             )}
           </div>
@@ -161,7 +160,7 @@ export default function FashionBot() {
             (model, idx) => (
               <img
                 key={`dup-${idx}`}
-                src={model}
+                src={model1}
                 alt={`model-${idx}`}
                 className="h-[200px] object-contain shrink-0"
               />

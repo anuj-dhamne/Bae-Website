@@ -1,7 +1,10 @@
 import React from "react";
 import { FaInstagram, FaLinkedin, FaPinterest } from "react-icons/fa";
+import { useNavigate, Link } from "react-router-dom";
 
 export default function Footer() {
+  const navigate = useNavigate();
+
   return (
     <div className="w-full min-h-[600px] bg-[#961B1E] flex flex-col justify-between px-14 py-12 pt-20">
       {/* Top Section */}
@@ -11,19 +14,20 @@ export default function Footer() {
           Sign up for updates
         </h2>
 
-        {/* Email Input + Button + Socials in One Line */}
+        {/* Email Box as a Button + Socials in One Line */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-          {/* Email Box */}
-          <div className="flex items-center bg-white rounded-lg px-6 py-4 w-full md:max-w-[500px] justify-between">
-            <input
-              type="email"
-              placeholder="Enter your email address"
-              className="w-full outline-none font-['Libre_Baskerville'] text-[#961B1E] text-[18px] md:text-[24px] placeholder-[#961B1E]"
-            />
-            <button className="text-[#961B1E] text-[22px] md:text-[26px] ml-4">
+          {/* Entire box is clickable */}
+          <button
+            onClick={() => navigate("/waitlist")}
+            className="flex items-center bg-white rounded-lg px-6 py-4 w-full md:max-w-[500px] justify-between hover:scale-[1.02] transition-transform"
+          >
+            <span className="w-full text-left font-['Libre_Baskerville'] text-[#961B1E] text-[18px] md:text-[24px]">
+              Enter your email address
+            </span>
+            <span className="text-[#961B1E] text-[22px] md:text-[26px] ml-4">
               →
-            </button>
-          </div>
+            </span>
+          </button>
 
           {/* Social Media */}
           <div className="flex gap-6 justify-center">
@@ -46,18 +50,18 @@ export default function Footer() {
           © Copyright
         </p>
         <div className="flex gap-8">
-          <a
-            href="#"
+          <Link
+            to="/contact"
             className="text-white font-['Libre_Baskerville'] text-[18px] md:text-[24px] hover:underline"
           >
             Contact us
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="/"
             className="text-white font-['Libre_Baskerville'] text-[18px] md:text-[24px] hover:underline"
           >
             Privacy policy
-          </a>
+          </Link>
         </div>
       </div>
     </div>
