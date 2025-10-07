@@ -2,8 +2,10 @@
 import React from "react";
 import sampleVideo from "../assets/HeroVideo.mp4"; // replace later
 import logo from "../assets/logo.png"; // replace later
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
+    const navigate = useNavigate();
   return (
     <div className="relative w-full h-screen overflow-hidden">
       {/* Background Video */}
@@ -32,12 +34,12 @@ const HeroSection = () => {
         {/* Buttons */}
         <div className="flex space-x-2 md:space-x-3">
           {/* Join Waitlist */}
-          <button className="w-[150px] md:w-[205.21px] h-[48px] md:h-[64px] rounded-full bg-[#961B1E] text-white font-medium hover:bg-[#65493B] transition text-[19.93px]  ">
+          <button className="w-[150px] md:w-[205.21px] h-[48px] md:h-[64px] rounded-full bg-[#961B1E] text-white font-medium hover:bg-[#65493B] transition text-[19.93px] " onClick={()=>{navigate("/waitlist")}}>
             Join waitlist
           </button>
 
           {/* Partner With Us */}
-          <button className="w-[160px] md:w-[219.43px] h-[48px] md:h-[64px] rounded-full bg-[#3C2F2F] text-white font-medium hover:bg-[#2a2020] transition text-[19.93px] ">
+          <button className="w-[160px] md:w-[219.43px] h-[48px] md:h-[64px] rounded-full bg-[#3C2F2F] text-white font-medium hover:bg-[#2a2020] transition text-[19.93px]" onClick={()=>{navigate("/contact")}}>
             Partner with us
           </button>
         </div>

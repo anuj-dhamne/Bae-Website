@@ -1,8 +1,9 @@
 import React from "react";
 import mobileGif from "../assets/mobile.gif"; // replace with actual gif path
 import vectorImg from "../assets/vector.png"; // replace with actual circular vector path
-
+import { useNavigate } from "react-router-dom";
 export default function Swip() {
+   const navigate = useNavigate();
   return (
     <div className="w-full h-screen flex flex-col relative">
       {/* Top Bar */}
@@ -56,7 +57,7 @@ export default function Swip() {
           </p>
 
           {/* Button */}
-          <button className="bg-[#961B1E] text-white font-['DM_Sans'] text-[24px] px-10 py-2 rounded-full w-[260px]">
+          <button className="bg-[#961B1E] text-white font-['DM_Sans'] text-[24px] px-10 py-2 rounded-full w-[260px]" onClick={()=>{navigate("/waitlist")}}>
             Join waitlist
           </button>
         </div>

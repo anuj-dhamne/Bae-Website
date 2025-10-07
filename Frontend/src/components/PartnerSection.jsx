@@ -1,7 +1,9 @@
 import React from "react";
 import partnerImg from "../assets/Partner.png"; // replace with your image
+import { useNavigate } from "react-router-dom";
 
 const PartnerSection = () => {
+   const navigate = useNavigate();
   return (
     <section
       className="w-full h-auto lg:h-screen flex items-center justify-center px-8 lg:px-24 py-12"
@@ -49,7 +51,7 @@ const PartnerSection = () => {
               width: "clamp(170px, 35vw, 340px)",
               height: "clamp(48px, 7vw, 68px)",
               fontSize: "clamp(13px, 2vw, 20px)",
-            }}
+            }} onClick={()=>{navigate("/contact")}}
           >
             Register your Brand
           </button>
