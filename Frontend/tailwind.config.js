@@ -3,6 +3,7 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}", 
   ],
+  
   theme: {
     extend: {
       keyframes: {
@@ -22,3 +23,5 @@ module.exports = {
   },
   plugins: [],
 };
+
+/* tailwind.config.js (for Tailwind 3+) */
