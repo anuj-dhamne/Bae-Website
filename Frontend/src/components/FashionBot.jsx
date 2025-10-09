@@ -8,12 +8,12 @@ import msg2 from "../assets/msg2.png";
 import msg3 from "../assets/msg3.png";
 import logo from "../assets/gemini_logo.png";
 import model1 from "../assets/model1.png";
-import model2 from "../assets/model1.png";
-import model3 from "../assets/model1.png";
-import model4 from "../assets/model1.png";
-import model5 from "../assets/model1.png";
-import model6 from "../assets/model1.png";
-import model7 from "../assets/model1.png";
+import model2 from "../assets/model2.png";
+import model3 from "../assets/model3.png";
+import model4 from "../assets/model4.png";
+import model5 from "../assets/model5.png";
+import model6 from "../assets/model6.png";
+import model7 from "../assets/model7.png";
 
 // Typing animation hook
 const useTypingEffect = (text, speed = 50, start = false) => {

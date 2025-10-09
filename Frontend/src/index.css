@@ -1,9 +1,9 @@
 @import "tailwindcss";
-/* @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Libre+Baskerville&display=swap'); */
 body {
   overflow-x: hidden;
   overflow-y: hidden;
 }
+
 
 /* Add to your App.css or equivalent */
 .section {
@@ -77,3 +77,34 @@ html, body {
     scrollbar-width: none;
   }
 }
+
+.meetbae-section {
+  max-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-snap-align: start;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.meetbae-section::-webkit-scrollbar {
+  display: none;
+}
+
+.meetbae-section,
+.founder-section {
+  scroll-snap-align: start;
+  max-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Mobile specific overrides */
+@media (max-width: 768px) {
+  .meetbae-section,
+  .founder-section {
+    max-height: 100vh;   /* viewport height on mobile */
+    overflow-y: auto;
+  }
+}
+
