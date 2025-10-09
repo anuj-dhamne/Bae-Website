@@ -7,13 +7,14 @@ import msg1 from "../assets/msg1.png";
 import msg2 from "../assets/msg2.png";
 import msg3 from "../assets/msg3.png";
 import logo from "../assets/gemini_logo.png";
-import model1 from "../assets/model1.png";
+import model1 from "../assets/model8.png";
 import model2 from "../assets/model2.png";
 import model3 from "../assets/model3.png";
 import model4 from "../assets/model4.png";
 import model5 from "../assets/model5.png";
 import model6 from "../assets/model6.png";
 import model7 from "../assets/model7.png";
+import model8 from "../assets/model9.png";
 
 // Typing animation hook
 const useTypingEffect = (text, speed = 50, start = false) => {
@@ -130,7 +131,7 @@ export default function FashionBot() {
       </div>
 
       {/* Typing Bar */}
-      <div className="flex items-center gap-6 px-24 mt-10 mb-13">
+      <div className="flex items-center gap-6 px-24 mt-13 mb-5">
         <img src={logo} alt="logo" className="w-[45px] h-[50px]" />
         <div className="w-full max-w-[1170px] h-[50px] bg-[#FFFFE6] rounded-lg flex items-center px-6">
           <p className="font-[DM_Sans] text-[#282827] text-[25px]">
@@ -146,23 +147,23 @@ export default function FashionBot() {
           animate={{ x: ["0%", "-100%"] }}
           transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
         >
-          {[model1, model2, model3, model4, model5, model6, model7].map(
+          {[model1, model2, model3, model4, model5, model6, model7,model8].map(
             (model, idx) => (
               <img
                 key={idx}
                 src={model}
                 alt={`model-${idx}`}
-                className="h-[200px] object-contain shrink-0"
+                className="h-[270px] object-contain shrink-0"
               />
             )
           )}
-          {[model1, model2, model3, model4, model5, model6, model7].map(
+          {[model1, model2, model3, model4, model5, model6, model7,model8].map(
             (model, idx) => (
               <img
                 key={`dup-${idx}`}
-                src={model1}
+                src={model}
                 alt={`model-${idx}`}
-                className="h-[200px] object-contain shrink-0"
+                className="h-[270px] object-contain shrink-0"
               />
             )
           )}
