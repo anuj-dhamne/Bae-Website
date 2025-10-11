@@ -65,8 +65,8 @@ export default function Section2() {
   alt="bubble1"
   className={`absolute transition-all duration-700 ease-out
     ${visible[0] ? "opacity-100 scale-100" : "opacity-0 scale-75"}
-    w-[70%] sm:w-[60%] md:w-[376px]
-    left-[3%] top-[6%] sm:left-[8%] sm:top-[10%] md:left-[310px] md:top-[47px]
+    w-[70%] sm:w-[60%] md:w-[36%] lg:w-[28%]
+    left-[5%] top-[8%] sm:left-[8%] sm:top-[10%] md:left-[22%] md:top-[10%] lg:left-[22%] lg:top-[8%]
   `}
 />
 
@@ -76,8 +76,8 @@ export default function Section2() {
   alt="bubble2"
   className={`absolute transition-all duration-700 ease-out
     ${visible[1] ? "opacity-100 scale-100" : "opacity-0 scale-75"}
-    w-[65%] sm:w-[55%] md:w-[343.78px]
-    left-[3%] top-[43%] sm:left-[18%] sm:top-[32%] md:left-[322.63px] md:top-[258.03px]
+    w-[65%] sm:w-[55%] md:w-[34%] lg:w-[26%]
+    left-[15%] top-[32%] sm:left-[18%] sm:top-[35%] md:left-[24%] md:top-[32%] lg:left-[26%] lg:top-[45%]
   `}
 />
 
@@ -87,8 +87,8 @@ export default function Section2() {
   alt="bubble3"
   className={`absolute transition-all duration-700 ease-out
     ${visible[2] ? "opacity-100 scale-100" : "opacity-0 scale-75"}
-    w-[60%] sm:w-[50%] md:w-[312.01px]
-    right-[2%] top-[25%] sm:right-[8%] sm:top-[18%] md:left-[1080px] md:top-[113px]
+    w-[60%] sm:w-[50%] md:w-[30%] lg:w-[24%]
+    right-[6%] top-[15%] sm:right-[8%] sm:top-[18%] md:right-[10%] md:top-[15%] lg:right-[9%] lg:top-[14%]
   `}
 />
 
@@ -98,10 +98,11 @@ export default function Section2() {
   alt="bubble4"
   className={`absolute transition-all duration-700 ease-out
     ${visible[3] ? "opacity-100 scale-100" : "opacity-0 scale-75"}
-    w-[65%] sm:w-[55%] md:w-[327.09px]
-    right-[2%] bottom-[10%] sm:right-[8%] sm:bottom-[12%] md:left-[980px] md:top-[348px]
+    w-[65%] sm:w-[55%] md:w-[32%] lg:w-[26%]
+    right-[6%] bottom-[10%] sm:right-[8%] sm:bottom-[12%] md:right-[10%] md:bottom-[10%] lg:right-[8%] lg:bottom-[6%]
   `}
 />
+
 
       </div>
     </div>
