@@ -1,11 +1,12 @@
 // src/components/HeroSection.jsx
 import React from "react";
-import sampleVideo from "../assets/HeroVideo.mp4"; // replace later
-import logo from "../assets/logo.png"; // replace later
+import sampleVideo from "../assets/HeroVideo.mp4";
+import logo from "../assets/logo.png";
 import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
+
   return (
     <div className="relative w-full h-screen overflow-hidden">
       {/* Background Video */}
@@ -19,32 +20,39 @@ const HeroSection = () => {
 
       {/* Overlay Navbar */}
       <nav
-        className="absolute top-0 left-0 w-full bg-gradient-to-b from-[#FFE4EB] to-white/20 flex items-center justify-between px-4 md:px-6
-                   h-[80px] md:h-[111px]"
+        className="absolute top-0 left-0 w-full bg-gradient-to-b from-[#FFE4EB] to-white/20 flex items-center justify-between 
+                   px-3 sm:px-4 md:px-6 h-[65px] sm:h-[80px] md:h-[111px]"
       >
         {/* Logo */}
-        <div className="relative">
+        <div className="flex items-center">
           <img
             src={logo}
             alt="Logo"
-            className="w-[250px] md:w-[375px] h-auto md:h-[127.55px] relative -translate-x-8 translate-y-1 md:-translate-x-8 md:translate-y-1"
+            className="w-[130px] sm:w-[180px] md:w-[280px] h-auto"
           />
         </div>
 
         {/* Buttons */}
-        <div className="flex space-x-2 md:space-x-3">
+        <div className="flex items-center space-x-2 sm:space-x-3">
           {/* Join Waitlist */}
-          <button className="w-[150px] md:w-[205.21px] h-[48px] md:h-[64px] rounded-full bg-[#961B1E] text-white font-medium hover:bg-[#65493B] transition text-[19.93px] " onClick={()=>{navigate("/waitlist")}}>
+          <button
+            className="w-[100px] sm:w-[140px] md:w-[205px] h-[34px] sm:h-[45px] md:h-[64px] rounded-full bg-[#961B1E] 
+                       text-white text-[12px] sm:text-[15px] md:text-[19px] font-medium hover:bg-[#65493B] transition"
+            onClick={() => navigate("/waitlist")}
+          >
             Join waitlist
           </button>
 
           {/* Partner With Us */}
-          <button className="w-[160px] md:w-[219.43px] h-[48px] md:h-[64px] rounded-full bg-[#3C2F2F] text-white font-medium hover:bg-[#2a2020] transition text-[19.93px]" onClick={()=>{navigate("/contact")}}>
+          <button
+            className="w-[110px] sm:w-[150px] md:w-[219px] h-[34px] sm:h-[45px] md:h-[64px] rounded-full bg-[#3C2F2F] 
+                       text-white text-[12px] sm:text-[15px] md:text-[19px] font-medium hover:bg-[#2a2020] transition"
+            onClick={() => navigate("/contact")}
+          >
             Partner with us
           </button>
         </div>
       </nav>
-
     </div>
   );
 };
