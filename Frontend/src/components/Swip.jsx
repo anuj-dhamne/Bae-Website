@@ -23,7 +23,7 @@ export default function Swip() {
           <img
             src={vectorImg}
             alt="Vector"
-            className="absolute w-[1000.99px] h-[1078.64px] object-contain"
+            className="absolute w-[920.99px] h-[1078.64px] object-contain"
           />
           {/* Mobile GIF */}
           <img
@@ -36,13 +36,13 @@ export default function Swip() {
         {/* Right Side (Text + Button) */}
         <div className="w-1/2 flex flex-col items-start text-left pl-5">
           {/* Titles */}
-          <h1 className="font-['Instrument_Serif'] text-[88.93px] text-[#B8191D] leading-[1.1]">
+          <h1 className="font-['Instrument_Serif'] italic text-[88.93px] text-[#B8191D] leading-[1.1]">
             Swipe it.
           </h1>
-          <h1 className="font-['Instrument_Serif'] text-[88.93px] text-[#865B46] leading-[1.1]">
+          <h1 className="font-['Instrument_Serif'] italic text-[88.93px] text-[#865B46] leading-[1.1]">
             Shop it.
           </h1>
-          <h1 className="font-['Instrument_Serif'] text-[88.93px] text-[#F17392] leading-[1.1] mb-4">
+          <h1 className="font-['Instrument_Serif'] italic text-[88.93px] text-[#F17392] leading-[1.1] mb-4">
             Style it.
           </h1>
 

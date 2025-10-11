@@ -123,7 +123,7 @@ export default function FashionBot() {
                 initial={{ y: 40, opacity: 0, scale: 0.9 }}
                 animate={{ y: 0, opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                className="w-[420px] h-[70px]"
+                className="w-[345px] h-[70px]"
               />
             )}
           </div>
