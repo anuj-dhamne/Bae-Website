@@ -21,23 +21,23 @@ const HeroSection = () => {
       {/* Overlay Navbar */}
       <nav
         className="absolute top-0 left-0 w-full bg-gradient-to-b from-[#FFE4EB] to-white/20 flex items-center justify-between 
-                   px-3 sm:px-4 md:px-6 h-[65px] sm:h-[80px] md:h-[111px]"
+                   px-2 sm:px-4 md:px-6 h-[60px] sm:h-[80px] md:h-[111px] overflow-x-auto no-scrollbar"
       >
         {/* Logo */}
-        <div className="flex items-center">
+        <div className="flex-shrink-0">
           <img
             src={logo}
             alt="Logo"
-            className="w-[130px] sm:w-[180px] md:w-[280px] h-auto"
+            className="w-[110px] sm:w-[170px] md:w-[280px] h-auto"
           />
         </div>
 
         {/* Buttons */}
-        <div className="flex items-center space-x-2 sm:space-x-3">
+        <div className="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
           {/* Join Waitlist */}
           <button
-            className="w-[100px] sm:w-[140px] md:w-[205px] h-[34px] sm:h-[45px] md:h-[64px] rounded-full bg-[#961B1E] 
-                       text-white text-[12px] sm:text-[15px] md:text-[19px] font-medium hover:bg-[#65493B] transition"
+            className="w-[90px] sm:w-[130px] md:w-[205px] h-[32px] sm:h-[45px] md:h-[64px] rounded-full bg-[#961B1E] 
+                       text-white text-[11px] sm:text-[15px] md:text-[19px] font-medium hover:bg-[#65493B] transition whitespace-nowrap"
             onClick={() => navigate("/waitlist")}
           >
             Join waitlist
@@ -45,8 +45,8 @@ const HeroSection = () => {
 
           {/* Partner With Us */}
           <button
-            className="w-[110px] sm:w-[150px] md:w-[219px] h-[34px] sm:h-[45px] md:h-[64px] rounded-full bg-[#3C2F2F] 
-                       text-white text-[12px] sm:text-[15px] md:text-[19px] font-medium hover:bg-[#2a2020] transition"
+            className="w-[105px] sm:w-[145px] md:w-[219px] h-[32px] sm:h-[45px] md:h-[64px] rounded-full bg-[#3C2F2F] 
+                       text-white text-[11px] sm:text-[15px] md:text-[19px] font-medium hover:bg-[#2a2020] transition whitespace-nowrap"
             onClick={() => navigate("/contact")}
           >
             Partner with us
