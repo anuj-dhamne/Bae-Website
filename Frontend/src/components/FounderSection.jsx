@@ -52,7 +52,7 @@ export default function FounderSection() {
             <img
               src={standing}
               alt="Founder standing"
-              className="w-[327.69px] h-[420px] object-cover rounded-lg shadow-md relative top-25"
+              className="w-[285px] h-[412px] object-cover rounded-lg shadow-md relative top-25"
             />
           </div>
         </div>
