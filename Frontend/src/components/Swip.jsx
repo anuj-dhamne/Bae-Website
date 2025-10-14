@@ -13,40 +13,47 @@ export default function Swip() {
 
       {/* Main Section */}
       <div
-        className="flex-1 w-full flex flex-col md:flex-row items-center justify-between 
-                   relative overflow-hidden"
+        className="flex-1 w-full flex flex-col md:flex-row items-center justify-between relative overflow-hidden"
         style={{
           background:
             "linear-gradient(90deg, #FEDFE6 12%, #FCF9E5 40%, #FCFBE5 100%, #FCFDE5 100%)",
         }}
       >
-        {/* MOBILE VIEW GRADIENT (top to bottom) */}
+        {/* 👇 MOBILE VIEW GRADIENT (bottom pink to top cream) */}
         <div
           className="absolute inset-0 md:hidden"
           style={{
             background:
-              "linear-gradient(180deg, #FFD3DC 0%, #FCFDE5 100%)",
+              "linear-gradient(0deg, #FFD3DC 0%, #FCFDE5 100%)",
           }}
         ></div>
 
-        {/* Left Section (Vector + Mobile GIF) */}
+        {/* LEFT SECTION (Vector + Mobile GIF) */}
         <div className="relative flex flex-col items-center justify-center w-full md:w-1/2 py-8 md:py-0 z-10">
-          {/* Vector Image (shown only on desktop) */}
+          {/* Vector Image - Desktop only */}
           <img
             src={vectorImg}
             alt="Vector"
             className="hidden md:block absolute w-[900px] h-auto object-contain"
           />
 
-          {/* Mobile GIF */}
-          <img
-            src={mobileGif}
-            alt="Mobile Preview"
-            className="relative w-[280px] sm:w-[320px] md:w-[350px] h-auto z-10 mx-auto"
-          />
+          {/* Mobile GIF — on top of vector in mobile */}
+          <div className="relative flex flex-col items-center justify-center">
+            {/* Vector Image - Mobile */}
+            <img
+              src={vectorImg}
+              alt="Vector Mobile"
+              className="md:hidden w-[360px] sm:w-[400px] h-auto object-contain relative z-0"
+            />
+            <img
+              src={mobileGif}
+              alt="Mobile Preview"
+              className="absolute top-2/3 -translate-y-[55%] w-[260px] sm:w-[300px] md:w-[350px] h-auto object-contain z-10"
+            />
+          </div>
         </div>
 
-        {/* Right Section (Text + Button) */}
+        {/* RIGHT SECTION (Text + Button) */}
         <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left z-10 px-6 sm:px-10 md:px-16 py-10 md:py-0">
           {/* Titles */}
           <div className="space-y-2 sm:space-y-3 mb-5 md:mb-6">
