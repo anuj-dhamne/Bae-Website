@@ -23,8 +23,7 @@ export default function Swip() {
         <div
           className="absolute inset-0 md:hidden"
           style={{
-            background:
-              "linear-gradient(0deg, #FFD3DC 0%, #FCFDE5 100%)",
+            background: "linear-gradient(0deg, #FFD3DC 0%, #FCFDE5 100%)",
           }}
         ></div>
 
@@ -37,18 +36,25 @@ export default function Swip() {
             className="hidden md:block absolute w-[900px] h-auto object-contain"
           />
 
-          {/* Mobile GIF — on top of vector in mobile */}
-          <div className="relative flex flex-col items-center justify-center">
+          {/* ✅ Add Mobile GIF for Desktop view (centered above vector) */}
+          <img
+            src={mobileGif}
+            alt="Mobile Preview Desktop"
+            className="hidden md:block relative z-10 w-[360px] h-auto object-contain mt-[20px]"
+          />
+
+          {/* Mobile Version (unchanged) */}
+          <div className="relative flex flex-col items-center justify-center md:hidden">
             {/* Vector Image - Mobile */}
             <img
               src={vectorImg}
               alt="Vector Mobile"
-              className="md:hidden w-[360px] sm:w-[400px] h-auto object-contain relative z-0"
+              className="w-[360px] sm:w-[400px] h-auto object-contain relative z-0"
             />
             <img
               src={mobileGif}
               alt="Mobile Preview"
-              className="absolute top-2/3 -translate-y-[55%] w-[260px] sm:w-[300px] md:w-[350px] h-auto object-contain z-10"
+              className="absolute top-2/3 -translate-y-[55%] w-[260px] sm:w-[300px] h-auto object-contain z-10"
             />
           </div>
         </div>

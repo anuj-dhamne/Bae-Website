@@ -130,56 +130,56 @@ export default function ContactUs() {
             >
               SUBMIT
             </button>
-            {/* Contact Info */}
-            <div className="flex justify-between items-start mt-10 w-full max-w-[520px]  ">
-              {/* Phone */}
-              <div className="flex items-start gap-3 ">
-                <img src={phone} alt="phone" className="w-5 h-5 mt-[2px]" />
-                <div className="flex flex-col leading-tight">
-                  <span className="text-[14px] font-semibold text-black font-['DM_Sans']">
-                    Phone
-                  </span>
-                  <a
-                    href="tel:9833030322"
-                    className="text-[#77191B] text-[13px] font-normal font-['DM_Sans']"
-                  >
-                    98330 30322
-                  </a>
-                </div>
-              </div>
-
-              {/* Email */}
-              <div className="flex items-start gap-3 ">
-                <img src={mail} alt="mail" className="w-5 h-5 mt-[2px]" />
-                <div className="flex flex-col leading-tight">
-                  <span className="text-[14px] font-semibold text-black font-['DM_Sans']">
-                    E-MAIL
-                  </span>
-                  <a
-                    href="mailto:aashna@shopwithbae.com"
-                    className="text-[#77191B] text-[13px] font-normal font-['DM_Sans']"
-                  >
-                    aashna@shopwithbae.com
-                  </a>
-                </div>
-              </div>
-
-              {/* Helpdesk */}
-              <div className="flex items-start gap-3">
-                <img src={mail} alt="help" className="w-5 h-5 mt-[2px]" />
-                <div className="flex flex-col leading-tight">
-                  <span className="text-[14px] font-semibold text-black font-['DM_Sans']">
-                    HELPDESK
-                  </span>
-                  <a
-                    href="mailto:inquiries@shopwithbae.com"
-                    className="text-[#77191B] text-[13px] font-normal font-['DM_Sans']"
-                  >
-                    inquiries@shopwithbae.com
-                  </a>
-                </div>
-              </div>
-            </div>
+                        {/* Contact Info */}
+                        <div className="flex flex-col sm:flex-row justify-between items-start mt-10 w-full max-w-[520px] gap-6">
+                          {/* Phone */}
+                          <div className="flex items-start gap-3">
+                            <img src={phone} alt="phone" className="w-5 h-5 mt-[2px]" />
+                            <div className="flex flex-col leading-tight">
+                              <span className="text-[14px] font-semibold text-black">
+                                Phone
+                              </span>
+                              <a
+                                href="tel:9833030322"
+                                className="text-[#77191B] text-[13px]"
+                              >
+                                98330 30322
+                              </a>
+                            </div>
+                          </div>
+            
+                          {/* Email */}
+                          <div className="flex items-start gap-3">
+                            <img src={mail} alt="mail" className="w-5 h-5 mt-[2px]" />
+                            <div className="flex flex-col leading-tight">
+                              <span className="text-[14px] font-semibold text-black">
+                                E-MAIL
+                              </span>
+                              <a
+                                href="mailto:aashna@shopwithbae.com"
+                                className="text-[#77191B] text-[13px]"
+                              >
+                                aashna@shopwithbae.com
+                              </a>
+                            </div>
+                          </div>
+            
+                          {/* Helpdesk */}
+                          <div className="flex items-start gap-3">
+                            <img src={mail} alt="helpdesk" className="w-5 h-5 mt-[2px]" />
+                            <div className="flex flex-col leading-tight">
+                              <span className="text-[14px] font-semibold text-black">
+                                HELPDESK
+                              </span>
+                              <a
+                                href="mailto:inquiries@shopwithbae.com"
+                                className="text-[#77191B] text-[13px]"
+                              >
+                                inquiries@shopwithbae.com
+                              </a>
+                            </div>
+                          </div>
+                        </div>
 
 
           </form>

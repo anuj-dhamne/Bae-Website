@@ -16,20 +16,18 @@ import model6 from "../assets/model6.png";
 import model7 from "../assets/model7.png";
 import model8 from "../assets/model9.png";
 
-// Typing animation hook
+// Typing effect hook
 const useTypingEffect = (text, speed = 50, start = false) => {
   const [displayed, setDisplayed] = useState("");
 
   useEffect(() => {
-    if (!start) return; // Only start typing when start = true
-
+    if (!start) return;
     let i = 0;
     const interval = setInterval(() => {
       setDisplayed((prev) => prev + text.charAt(i));
       i++;
       if (i >= text.length) clearInterval(interval);
     }, speed);
-
     return () => clearInterval(interval);
   }, [text, speed, start]);
 
@@ -38,7 +36,7 @@ const useTypingEffect = (text, speed = 50, start = false) => {
 
 export default function FashionBot() {
   const text =
-    "HHere are a few college outfit recommendations tailored to flatter your body type and aesthetics.";
+    " Here are a few college outfit recommendations tailored to flatter your body type and aesthetic.";
 
   const [step, setStep] = useState(0);
   const { ref, inView } = useInView({
@@ -46,124 +44,129 @@ export default function FashionBot() {
     triggerOnce: true,
   });
 
-  const typedText = useTypingEffect(text, 40, inView); // Start typing only when in view
+  const typedText = useTypingEffect(text, 40, inView);
 
-  // Start chat message animation sequence
   useEffect(() => {
     if (inView) {
-      setTimeout(() => setStep(1), 300); // msg1 appears
-      setTimeout(() => setStep(2), 1300); // msg2 appears
-      setTimeout(() => setStep(3), 2300); // msg3 appears
+      setTimeout(() => setStep(1), 300);
+      setTimeout(() => setStep(2), 1300);
+      setTimeout(() => setStep(3), 2300);
     }
   }, [inView]);
 
   return (
     <div
       ref={ref}
-      className="w-screen h-screen overflow-hidden bg-gradient-to-b from-[#FFFFE6] to-[#FFCDD9] flex flex-col justify-between"
+      className="w-screen min-h-screen overflow-hidden bg-gradient-to-b from-[#FFFFE6] to-[#FFCDD9] flex flex-col justify-between"
     >
-      {/* Top Section */}
-      <div className="flex justify-between items-end px-24 pt-12">
+      {/* ---------- TOP SECTION ---------- */}
+      <div className="flex flex-col lg:flex-row justify-between items-center lg:items-end px-6 lg:px-24 pt-12">
         {/* Left Title */}
-        <div className="max-w-[800px]">
-          <h1 className="font-[Instrument_Serif] text-[#961B1E] text-[90px] leading-none">
+        <div className="max-w-[800px] text-center lg:text-left mb-8 lg:mb-0">
+          <h1 className="font-[Instrument_Serif] text-[#961B1E] text-[48px] sm:text-[65px] lg:text-[90px] leading-tight">
             Ask me <br />
             <span className="italic text-[#961B1E]">anything</span>{" "}
-            <span className="text-[90px] not-italic">BOT</span>
+            <span className="not-italic">BOT</span>
           </h1>
-          <p className="font-[DM_Sans] text-[#543B2E] text-[25px] mt-6">
-            From celeb looks to daily outfits, get instant style
-            <br />
-            advice. Your fashion BFF whenever you’re stuck.
+          <p className="font-[DM_Sans] text-[#543B2E] text-[16px] sm:text-[20px] lg:text-[25px] mt-4">
+            From celeb looks to daily outfits, get instant style advice.
+            <br className="hidden lg:block" />
+            Your fashion BFF whenever you’re stuck.
           </p>
         </div>
 
-        {/* Chat Section */}
-        <div className="relative w-[600px] h-[280px] flex justify-start items-end">
-          {/* Static DP */}
-          <div className="z-10 mb-[20px]">
-            <img
-              src={profilePic}
-              alt="profile"
-              className="w-[59px] h-[59px] rounded-full"
-            />
-          </div>
+        {/* ---------- CHAT SECTION ---------- */}
+<div className="relative w-full sm:w-[600px] lg:w-[600px] flex justify-center lg:justify-start items-end">
+  {/* Static DP */}
+  <div className="absolute left-2 sm:left-0 bottom-[3px] z-10">
+    <img
+      src={profilePic}
+      alt="profile"
+      className="w-[40px] h-[40px] sm:w-[55px] sm:h-[55px] rounded-full"
+    />
+  </div>
 
-          {/* Chat Messages Container */}
-          <div className="ml-4 flex flex-col items-start justify-end gap-3 h-[180px] w-[450px] overflow-visible mb-[20px]">
-            {/* msg1 */}
-            {step >= 1 && (
-              <motion.img
-                src={msg1}
-                alt="msg1"
-                initial={{ y: 40, opacity: 0, scale: 0.9 }}
-                animate={{ y: 0, opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-                className="w-[400px] h-[70px]"
-              />
-            )}
+  {/* Messages (responsive height & width) */}
+  <div className="ml-[65px] sm:ml-[80px] flex flex-col items-start justify-end gap-2 
+                  h-[180px] sm:h-[220px] w-[85%] sm:w-[450px] overflow-hidden relative">
 
-            {/* msg2 */}
-            {step >= 2 && (
-              <motion.img
-                src={msg2}
-                alt="msg2"
-                initial={{ y: 40, opacity: 0, scale: 0.9 }}
-                animate={{ y: 0, opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-                className="w-[440px] h-[70px]"
-              />
-            )}
+    {step >= 1 && (
+      <motion.img
+        src={msg1}
+        alt="msg1"
+        initial={{ y: 60, opacity: 0, scale: 0.9 }}
+        animate={{ y: 0, opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="w-[80%] sm:w-[400px] h-[50px] sm:h-[70px]"
+      />
+    )}
 
-            {/* msg3 */}
-            {step >= 3 && (
-              <motion.img
-                src={msg3}
-                alt="msg3"
-                initial={{ y: 40, opacity: 0, scale: 0.9 }}
-                animate={{ y: 0, opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-                className="w-[345px] h-[70px]"
-              />
-            )}
-          </div>
-        </div>
+    {step >= 2 && (
+      <motion.img
+        src={msg2}
+        alt="msg2"
+        initial={{ y: 60, opacity: 0, scale: 0.9 }}
+        animate={{ y: 0, opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+        className="w-[85%] sm:w-[440px] h-[50px] sm:h-[70px]"
+      />
+    )}
+
+    {step >= 3 && (
+      <motion.img
+        src={msg3}
+        alt="msg3"
+        initial={{ y: 60, opacity: 0, scale: 0.9 }}
+        animate={{ y: 0, opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+        className="w-[70%] sm:w-[345px] h-[50px] sm:h-[70px]"
+      />
+    )}
+  </div>
+</div>
+
       </div>
 
-      {/* Typing Bar */}
-      <div className="flex items-center gap-6 px-24 mt-13 mb-5">
-        <img src={logo} alt="logo" className="w-[45px] h-[50px]" />
-        <div className="w-full max-w-[1170px] h-[50px] bg-[#FFFFE6] rounded-lg flex items-center px-6">
-          <p className="font-[DM_Sans] text-[#282827] text-[25px]">
+      {/* ---------- TYPING BAR (Gemini logo on left) ---------- */}
+      <div className="flex flex-row items-center justify-center gap-3 sm:gap-4 px-6 lg:px-24 mt-10 mb-6">
+        {/* Gemini Logo */}
+        <img
+          src={logo}
+          alt="logo"
+          className="w-[35px] h-[35px] sm:w-[45px] sm:h-[45px]"
+        />
+        {/* Typing Box */}
+        <div className="flex-1 bg-[#FFFFE6] rounded-lg flex items-center px-4 py-3 sm:h-[50px]">
+          <p className="font-[DM_Sans] text-[#282827] text-[16px] sm:text-[22px] leading-snug">
             {typedText}
           </p>
         </div>
       </div>
 
-      {/* Scrolling Models */}
-      <div className="w-full h-[370px] overflow-hidden mt-6 relative">
+      {/* ---------- SCROLLING MODELS ---------- */}
+      <div className="w-full h-[250px] sm:h-[300px] lg:h-[370px] overflow-hidden mt-4 relative">
         <motion.div
-          className="flex gap-12 min-w-full"
+          className="flex gap-8 sm:gap-12 min-w-full"
           animate={{ x: ["0%", "-100%"] }}
           transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
         >
-          {[model1, model2, model3, model4, model5, model6, model7,model8].map(
+          {[model1, model2, model3, model4, model5, model6, model7, model8].map(
             (model, idx) => (
               <img
                 key={idx}
                 src={model}
                 alt={`model-${idx}`}
-                className="h-[270px] object-contain shrink-0"
+                className="h-[200px] sm:h-[270px] object-contain shrink-0"
               />
             )
           )}
-          {[model1, model2, model3, model4, model5, model6, model7,model8].map(
+          {[model1, model2, model3, model4, model5, model6, model7, model8].map(
             (model, idx) => (
               <img
                 key={`dup-${idx}`}
                 src={model}
                 alt={`model-${idx}`}
-                className="h-[270px] object-contain shrink-0"
+                className="h-[200px] sm:h-[270px] object-contain shrink-0"
               />
             )
           )}
