@@ -128,7 +128,7 @@ export default function FashionBot() {
       </div>
 
       {/* ---------- TYPING BAR (Gemini logo on left) ---------- */}
-      <div className="flex flex-row items-center justify-center gap-3 sm:gap-4 px-6 lg:px-24 mt-10 mb-6">
+      <div className="flex flex-row items-center justify-center gap-2 sm:gap-4 px-6 lg:px-24 mt-10 mb-6">
         {/* Gemini Logo */}
         <img
           src={logo}

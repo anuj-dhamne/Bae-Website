@@ -34,7 +34,7 @@ export default function FounderSection() {
               className="font-['DM_Sans'] text-[#282827] leading-relaxed max-w-[700px]"
               style={{ fontSize: "clamp(15px, 2.5vw, 26px)" }}
             >
-              Meet Asshna Punjabi — a fashion influencer and enthusiast on a mission
+              Meet Asshna Punjabi a fashion influencer and enthusiast on a mission
               to make shopping fun, personalized, and gamified. Frustrated with endless
               scrolling and outfits that missed the vibe, she built BAE: your style best
               friend to discover looks, match aesthetics, and recreate styles you love.
@@ -96,7 +96,7 @@ export default function FounderSection() {
       {/* Mobile/Tablet layout */}
       <div className="flex flex-col w-full max-w-[1920px] lg:hidden gap-12">
         {/* Meet the Founder Text Box */}
-        <div className="text-center px-4">
+        <div className="text-center px-4 ">
           <h1
             className="font-['Instrument_Serif'] text-[#961B1E] leading-tight mb-4"
             style={{ fontSize: "clamp(32px, 6vw, 60px)" }}
@@ -104,16 +104,18 @@ export default function FounderSection() {
             MEET THE FOUNDER
           </h1>
           <h2
-            className="font-['Italianno'] text-[#65493B] mb-6"
-            style={{ fontSize: "clamp(24px, 5vw, 40px)" }}
+            className="font-['Italianno'] text-[#65493B] mb-3"
+            style={{ fontSize: "clamp(30px, 5vw, 40px)" }}
           >
             Asshna Punjabi (She/her)
           </h2>
           <p
             className="font-['DM_Sans'] text-[#282827] leading-relaxed"
-            style={{ fontSize: "clamp(14px, 2.5vw, 20px)" }}
+             style={{
+              fontSize: "clamp(14px, 2.5vw, 26px)",
+            }}
           >
-            Meet Asshna Punjabi — a fashion influencer and enthusiast on a mission
+            Meet Asshna Punjabi  a fashion influencer and enthusiast on a mission
             to make shopping fun, personalized, and gamified. Frustrated with endless
             scrolling and outfits that missed the vibe, she built BAE: your style best
             friend to discover looks, match aesthetics, and recreate styles you love.
@@ -145,7 +147,9 @@ export default function FounderSection() {
           </h1>
           <p
             className="font-['DM_Sans'] text-[#282827] leading-relaxed"
-            style={{ fontSize: "clamp(14px, 2.5vw, 18px)" }}
+             style={{
+              fontSize: "clamp(14px, 2.5vw, 26px)",
+            }}
           >
             Meet Asshna Punjabi, a social media influencer and a fashion enthusiast,
             on a mission to make shopping more fun, personalized and gamified.

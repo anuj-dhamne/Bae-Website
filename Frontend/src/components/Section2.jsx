@@ -125,7 +125,7 @@ export default function Section2() {
             w-[65%] sm:w-[55%] md:w-[32%] lg:w-[26%]
             ${isMobile
               ? "right-[6%] bottom-[8%]" // 📱 last bubble near bottom right
-              : "right-[8%] bottom-[6%]"} // 💻 desktop layout
+              : "right-[7%] bottom-[2%]"} // 💻 desktop layout
           `}
         />
       </div>

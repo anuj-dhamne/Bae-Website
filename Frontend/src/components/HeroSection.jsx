@@ -21,14 +21,14 @@ const HeroSection = () => {
       {/* Overlay Navbar */}
       <nav
         className="absolute top-0 left-0 w-full bg-gradient-to-b from-[#FFE4EB] to-white/20 flex items-center justify-between 
-                   px-2 sm:px-4 md:px-6 h-[60px] sm:h-[80px] md:h-[111px] overflow-x-auto no-scrollbar"
+                   px-2 sm:px-4 md:px-6 h-[60px] sm:h-[80px] md:h-[78px] overflow-x-auto no-scrollbar"
       >
         {/* Logo */}
         <div className="flex-shrink-0">
           <img
             src={logo}
             alt="Logo"
-            className="w-[110px] sm:w-[170px] md:w-[280px] h-auto"
+            className="w-[120px] sm:w-[10px] md:w-[350px] h-auto mt-3"
           />
         </div>
 
