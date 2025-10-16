@@ -75,7 +75,7 @@ export default function Waitlist() {
                     href="tel:9833030322"
                     className="text-[#77191B] text-[13px]"
                   >
-                    98330 30322
+                    9833030322
                   </a>
                 </div>
               </div>

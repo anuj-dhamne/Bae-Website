@@ -48,11 +48,14 @@ export default function Footer() {
       <div className="border-t border-white/30 my-6 md:hidden"></div>
 
       {/* Bottom Section */}
-      <div className="flex flex-col md:flex-row justify-between items-center pt-4 gap-3 md:gap-4 text-center md:text-left">
+      <div className="flex flex-row justify-between items-start pt-4 w-full">
+        {/* Left side */}
         <p className="text-white font-['Libre_Baskerville'] text-[16px] sm:text-[18px] md:text-[24px]">
           © Copyright
         </p>
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-8">
+
+        {/* Right side (stacked vertically) */}
+        <div className="flex flex-col gap-2 sm:gap-3 items-end">
           <Link
             to="/contact"
             className="text-white font-['Libre_Baskerville'] text-[16px] sm:text-[18px] md:text-[24px] hover:underline"

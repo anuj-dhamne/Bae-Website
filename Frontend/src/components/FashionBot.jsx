@@ -136,7 +136,7 @@ export default function FashionBot() {
           className="w-[35px] h-[35px] sm:w-[45px] sm:h-[45px]"
         />
         {/* Typing Box */}
-        <div className="flex-1 bg-[#FFFFE6] rounded-lg flex items-center px-4 py-3 sm:h-[50px]">
+        <div className="flex-1 bg-[#FFFFE6] rounded-lg flex items-center px-4 py-3 sm:h-[50px] lg:max-w-[1050px]">
           <p className="font-[DM_Sans] text-[#282827] text-[16px] sm:text-[22px] leading-snug">
             {typedText}
           </p>

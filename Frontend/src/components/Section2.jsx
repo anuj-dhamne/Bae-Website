@@ -10,7 +10,7 @@ import bubble4 from "../assets/bubble4.png";
 import bubble3Mobile from "../assets/bubble3Mobile.png"; // mobile version
 import bubble1Mobile from "../assets/bubble1Mobile.png"; // mobile version
 import bubble2Mobile from "../assets/bubble2Mobile.png"; // mobile version
-import bubble4Mobile from "../assets/bubble3Mobile.png"; // mobile version
+import bubble4Mobile from "../assets/bubble4Mobile.png"; // mobile version
 
 import "./marquee.css";
 
@@ -98,7 +98,7 @@ export default function Section2() {
             ${visible[1] ? "opacity-100 scale-100" : "opacity-0 scale-75"}
             w-[65%] sm:w-[55%] md:w-[34%] lg:w-[26%]
             ${isMobile
-              ? "left-[-1%] top-[14%]" // 📱 below and slightly right
+              ? "left-[-1%] top-[15%]" // 📱 below and slightly right
               : "left-[26%] top-[45%]"} // 💻 desktop layout
           `}
         />
@@ -111,7 +111,7 @@ export default function Section2() {
             ${visible[2] ? "opacity-100 scale-100" : "opacity-0 scale-75"}
             w-[60%] sm:w-[50%] md:w-[30%] lg:w-[24%]
             ${isMobile
-              ? "left-[-2%] top-[32%]" // 📱 diagonally lower right
+              ? "left-[-2%] top-[35%]" // 📱 diagonally lower right
               : "right-[9%] top-[14%]"} // 💻 desktop layout
           `}
         />
@@ -124,7 +124,7 @@ export default function Section2() {
             ${visible[3] ? "opacity-100 scale-100" : "opacity-0 scale-75"}
             w-[65%] sm:w-[55%] md:w-[32%] lg:w-[26%]
             ${isMobile
-              ? "right-[6%] bottom-[8%]" // 📱 last bubble near bottom right
+              ? "left-[2%] bottom-[21%]" // 📱 last bubble near bottom right
               : "right-[7%] bottom-[2%]"} // 💻 desktop layout
           `}
         />
