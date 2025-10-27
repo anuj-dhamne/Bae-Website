@@ -47,12 +47,17 @@ export default function Waitlist() {
                 <option value="delhi">Delhi</option>
               </select>
               <select className="w-1/2 border-b border-[#8E8E8E] text-[14px] text-[#8E8E8E] bg-transparent pb-2 focus:outline-none">
-                <option value="">Style</option>
-                <option value="casual">Casual</option>
-                <option value="formal">Formal</option>
-                <option value="party">Party</option>
+                <option value="">Vibe</option>
+                <option value="casual">Old Money</option>
+                <option value="formal">Soft girl/Coquette</option>
+                <option value="party">Clean Girl</option>
+                <option value="party">Baddie</option>
+                <option value="party">Street Style</option>
+                <option value="party">Basic Girl</option>
               </select>
             </div>
+
+
 
             {/* Submit Button */}
             <button
@@ -65,7 +70,7 @@ export default function Waitlist() {
             {/* Contact Info */}
             <div className="flex flex-col sm:flex-row justify-between items-start mt-10 w-full max-w-[520px] gap-6">
               {/* Phone */}
-              <div className="flex items-start gap-3">
+              {/* <div className="flex items-start gap-3">
                 <img src={phone} alt="phone" className="w-5 h-5 mt-[2px]" />
                 <div className="flex flex-col leading-tight">
                   <span className="text-[14px] font-semibold text-black">
@@ -78,7 +83,7 @@ export default function Waitlist() {
                     9833030322
                   </a>
                 </div>
-              </div>
+              </div> */}
 
               {/* Email */}
               <div className="flex items-start gap-3">
@@ -88,10 +93,10 @@ export default function Waitlist() {
                     E-MAIL
                   </span>
                   <a
-                    href="mailto:aashna@shopwithbae.com"
+                    href="mailto:asshna@shopwithbae.com"
                     className="text-[#77191B] text-[13px]"
                   >
-                    aashna@shopwithbae.com
+                    asshna@shopwithbae.com
                   </a>
                 </div>
               </div>

@@ -57,7 +57,7 @@ export default function MeetBae() {
                 num: "04",
                 color: "#BD797A",
                 title: "Ask me Anything Chatbot",
-                desc: "Like that one friend who always knows what suits you — from outfits to brands you’ll love.",
+                desc: "Like that one friend who always knows what suits you from outfits to brands you’ll love.",
               },
             ].map((item, i) => (
               <div key={i} className="flex flex-col gap-3 sm:gap-4">

@@ -4,7 +4,7 @@ import { useInView } from "react-intersection-observer";
 
 import profilePic from "../assets/dp.png";
 import msg1 from "../assets/msg1.png";
-import msg2 from "../assets/msg2.png";
+import msg2 from "../assets/msg2new_pic.png";
 import msg3 from "../assets/msg3.png";
 import logo from "../assets/gemini_logo.png";
 import model1 from "../assets/model8.png";
@@ -69,9 +69,9 @@ export default function FashionBot() {
             <span className="not-italic">BOT</span>
           </h1>
           <p className="font-[DM_Sans] text-[#543B2E] text-[16px] sm:text-[20px] lg:text-[25px] mt-4">
-            From celeb looks to daily outfits, get instant style advice.
+            From celeb looks to daily outfits, get instant style advice. 
             <br className="hidden lg:block" />
-            Your fashion BFF whenever you’re stuck.
+             Your fashion BFF whenever you’re stuck !
           </p>
         </div>
 

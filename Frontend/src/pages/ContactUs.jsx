@@ -133,7 +133,7 @@ export default function ContactUs() {
                         {/* Contact Info */}
                         <div className="flex flex-col sm:flex-row justify-between items-start mt-10 w-full max-w-[520px] gap-6">
                           {/* Phone */}
-                          <div className="flex items-start gap-3">
+                          {/* <div className="flex items-start gap-3">
                             <img src={phone} alt="phone" className="w-5 h-5 mt-[2px]" />
                             <div className="flex flex-col leading-tight">
                               <span className="text-[14px] font-semibold text-black">
@@ -146,7 +146,7 @@ export default function ContactUs() {
                                 9833030322
                               </a>
                             </div>
-                          </div>
+                          </div> */}
             
                           {/* Email */}
                           <div className="flex items-start gap-3">
@@ -156,10 +156,10 @@ export default function ContactUs() {
                                 E-MAIL
                               </span>
                               <a
-                                href="mailto:aashna@shopwithbae.com"
+                                href="mailto:asshna@shopwithbae.com"
                                 className="text-[#77191B] text-[13px]"
                               >
-                                aashna@shopwithbae.com
+                                asshna@shopwithbae.com
                               </a>
                             </div>
                           </div>

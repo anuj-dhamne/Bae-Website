@@ -36,7 +36,7 @@ const HeroSection = () => {
         <div className="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
           {/* Join Waitlist */}
           <button
-            className="w-[90px] sm:w-[130px] md:w-[205px] h-[32px] sm:h-[45px] md:h-[64px] rounded-full bg-[#961B1E] 
+            className="w-[90px] sm:w-[130px] md:w-[180px] h-[32px] sm:h-[45px] md:h-[50px] rounded-full bg-[#961B1E] 
                        text-white text-[11px] sm:text-[15px] md:text-[19px] font-medium hover:bg-[#65493B] transition whitespace-nowrap"
             onClick={() => navigate("/waitlist")}
           >
@@ -45,7 +45,7 @@ const HeroSection = () => {
 
           {/* Partner With Us */}
           <button
-            className="w-[105px] sm:w-[145px] md:w-[219px] h-[32px] sm:h-[45px] md:h-[64px] rounded-full bg-[#3C2F2F] 
+            className="w-[105px] sm:w-[145px] md:w-[200px] h-[32px] sm:h-[45px] md:h-[50px] rounded-full bg-[#3C2F2F] 
                        text-white text-[11px] sm:text-[15px] md:text-[19px] font-medium hover:bg-[#2a2020] transition whitespace-nowrap"
             onClick={() => navigate("/contact")}
           >

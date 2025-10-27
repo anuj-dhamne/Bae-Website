@@ -80,9 +80,9 @@ export default function FounderSection() {
               className="font-['DM_Sans'] text-[#282827] leading-relaxed max-w-[800px]"
               style={{ fontSize: "clamp(15px, 2.5vw, 26px)" }}
             >
-              Meet Asshna Punjabi, a social media influencer and a fashion enthusiast,
+              {/* Meet Asshna Punjabi, a social media influencer and a fashion enthusiast,
               on a mission to make shopping more fun, personalized and gamified.
-              <br />
+              <br /> */}
               <br />
               Being a Gen Z girl herself, she understands the struggles of girls
               shopping online; endless scrolling and barely finding outfits that match
@@ -151,9 +151,9 @@ export default function FounderSection() {
               fontSize: "clamp(14px, 2.5vw, 26px)",
             }}
           >
-            Meet Asshna Punjabi, a social media influencer and a fashion enthusiast,
+            {/* Meet Asshna Punjabi, a social media influencer and a fashion enthusiast,
             on a mission to make shopping more fun, personalized and gamified.
-            <br />
+            <br /> */}
             <br />
             Being a Gen Z girl herself, she understands the struggles of girls
             shopping online; endless scrolling and barely finding outfits that match
