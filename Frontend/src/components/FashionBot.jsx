@@ -54,6 +54,15 @@ export default function FashionBot() {
     }
   }, [inView]);
 
+  // ✅ Detect if mobile to adjust animation speed
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div
       ref={ref}
@@ -71,71 +80,68 @@ export default function FashionBot() {
           <p className="font-[DM_Sans] text-[#543B2E] text-[16px] sm:text-[20px] lg:text-[25px] mt-4">
             From celeb looks to daily outfits, get instant style advice. 
             <br className="hidden lg:block" />
-             Your fashion BFF whenever you’re stuck !
+            Your fashion BFF whenever you’re stuck !
           </p>
         </div>
 
         {/* ---------- CHAT SECTION ---------- */}
-<div className="relative w-full sm:w-[600px] lg:w-[600px] flex justify-center lg:justify-start items-end">
-  {/* Static DP */}
-  <div className="absolute left-2 sm:left-0 bottom-[3px] z-10">
-    <img
-      src={profilePic}
-      alt="profile"
-      className="w-[40px] h-[40px] sm:w-[55px] sm:h-[55px] rounded-full"
-    />
-  </div>
+        <div className="relative w-full sm:w-[600px] lg:w-[600px] flex justify-center lg:justify-start items-end">
+          {/* Static DP */}
+          <div className="absolute left-2 sm:left-0 bottom-[3px] z-10">
+            <img
+              src={profilePic}
+              alt="profile"
+              className="w-[40px] h-[40px] sm:w-[55px] sm:h-[55px] rounded-full"
+            />
+          </div>
 
-  {/* Messages (responsive height & width) */}
-  <div className="ml-[65px] sm:ml-[80px] flex flex-col items-start justify-end gap-2 
-                  h-[180px] sm:h-[220px] w-[85%] sm:w-[450px] overflow-hidden relative">
+          {/* Messages */}
+          <div className="ml-[65px] sm:ml-[80px] flex flex-col items-start justify-end gap-2 
+                          h-[180px] sm:h-[220px] w-[85%] sm:w-[450px] overflow-hidden relative">
 
-    {step >= 1 && (
-      <motion.img
-        src={msg1}
-        alt="msg1"
-        initial={{ y: 60, opacity: 0, scale: 0.9 }}
-        animate={{ y: 0, opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        className="w-[80%] sm:w-[400px] h-[50px] sm:h-[70px]"
-      />
-    )}
+            {step >= 1 && (
+              <motion.img
+                src={msg1}
+                alt="msg1"
+                initial={{ y: 60, opacity: 0, scale: 0.9 }}
+                animate={{ y: 0, opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                className="w-[80%] sm:w-[400px] h-[50px] sm:h-[70px]"
+              />
+            )}
 
-    {step >= 2 && (
-      <motion.img
-        src={msg2}
-        alt="msg2"
-        initial={{ y: 60, opacity: 0, scale: 0.9 }}
-        animate={{ y: 0, opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-        className="w-[85%] sm:w-[440px] h-[50px] sm:h-[70px]"
-      />
-    )}
+            {step >= 2 && (
+              <motion.img
+                src={msg2}
+                alt="msg2"
+                initial={{ y: 60, opacity: 0, scale: 0.9 }}
+                animate={{ y: 0, opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+                className="w-[85%] sm:w-[440px] h-[50px] sm:h-[70px]"
+              />
+            )}
 
-    {step >= 3 && (
-      <motion.img
-        src={msg3}
-        alt="msg3"
-        initial={{ y: 60, opacity: 0, scale: 0.9 }}
-        animate={{ y: 0, opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
-        className="w-[70%] sm:w-[345px] h-[50px] sm:h-[70px]"
-      />
-    )}
-  </div>
-</div>
-
+            {step >= 3 && (
+              <motion.img
+                src={msg3}
+                alt="msg3"
+                initial={{ y: 60, opacity: 0, scale: 0.9 }}
+                animate={{ y: 0, opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+                className="w-[70%] sm:w-[345px] h-[50px] sm:h-[70px]"
+              />
+            )}
+          </div>
+        </div>
       </div>
 
-      {/* ---------- TYPING BAR (Gemini logo on left) ---------- */}
+      {/* ---------- TYPING BAR ---------- */}
       <div className="flex flex-row items-center justify-center gap-2 sm:gap-4 px-6 lg:px-24 mt-10 mb-6">
-        {/* Gemini Logo */}
         <img
           src={logo}
           alt="logo"
           className="w-[35px] h-[35px] sm:w-[45px] sm:h-[45px]"
         />
-        {/* Typing Box */}
         <div className="flex-1 bg-[#FFFFE6] rounded-lg flex items-center px-4 py-3 sm:h-[50px] lg:max-w-[1050px]">
           <p className="font-[DM_Sans] text-[#282827] text-[16px] sm:text-[22px] leading-snug">
             {typedText}
@@ -148,7 +154,11 @@ export default function FashionBot() {
         <motion.div
           className="flex gap-8 sm:gap-12 min-w-full"
           animate={{ x: ["0%", "-100%"] }}
-          transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
+          transition={{
+            repeat: Infinity,
+            duration: isMobile ? 12 : 25, // ✅ Faster scroll on mobile
+            ease: "linear",
+          }}
         >
           {[model1, model2, model3, model4, model5, model6, model7, model8].map(
             (model, idx) => (

@@ -13,9 +13,12 @@ const HeroSection = () => {
       <video
         className="absolute top-0 left-0 w-full h-full object-cover"
         src={sampleVideo}
+        playsInline
+        webkit-playsinline="true"
+        muted
         autoPlay
         loop
-        muted
+        controls={false}
       />
 
       {/* Overlay Navbar */}

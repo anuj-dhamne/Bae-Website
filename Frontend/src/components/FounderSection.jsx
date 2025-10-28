@@ -34,11 +34,7 @@ export default function FounderSection() {
               className="font-['DM_Sans'] text-[#282827] leading-relaxed max-w-[700px]"
               style={{ fontSize: "clamp(15px, 2.5vw, 26px)" }}
             >
-              Meet Asshna Punjabi a fashion influencer and enthusiast on a mission
-              to make shopping fun, personalized, and gamified. Frustrated with endless
-              scrolling and outfits that missed the vibe, she built BAE: your style best
-              friend to discover looks, match aesthetics, and recreate styles you love.
-              Join her in building the future of fashion.
+              Meet Asshna Punjabi a fashion influencer and enthusiast on a mission to make shopping fun, personalized, and gamified. Frustrated with endless scrolling and outfits that didn’t match  her vibe, she built BAE: your style best friend helping you discover looks that match your aesthetic, occasion, and body type. Join her and be a part of the future of online shopping.
             </p>
           </div>
 
@@ -84,10 +80,7 @@ export default function FounderSection() {
               on a mission to make shopping more fun, personalized and gamified.
               <br /> */}
               <br />
-              Being a Gen Z girl herself, she understands the struggles of girls
-              shopping online; endless scrolling and barely finding outfits that match
-              their vibe! Here, she clearly identified a gap in the market and decided
-              to build BAE.
+             We believe fashion is one of the biggest forms of self-expression and every girl deserves to wear outfits that look and feel like her. We want discovery to feel fun again and to bring both discovery and purchase together on one platform. We aim to scale this to India’s largest online shopping app.
             </p>
           </div>
         </div>
@@ -115,11 +108,7 @@ export default function FounderSection() {
               fontSize: "clamp(14px, 2.5vw, 26px)",
             }}
           >
-            Meet Asshna Punjabi  a fashion influencer and enthusiast on a mission
-            to make shopping fun, personalized, and gamified. Frustrated with endless
-            scrolling and outfits that missed the vibe, she built BAE: your style best
-            friend to discover looks, match aesthetics, and recreate styles you love.
-            Join her in building the future of fashion.
+            Meet Asshna Punjabi a fashion influencer and enthusiast on a mission to make shopping fun, personalized, and gamified. Frustrated with endless scrolling and outfits that didn’t match  her vibe, she built BAE: your style best friend helping you discover looks that match your aesthetic, occasion, and body type. Join her and be a part of the future of online shopping.
           </p>
         </div>
 
@@ -155,10 +144,7 @@ export default function FounderSection() {
             on a mission to make shopping more fun, personalized and gamified.
             <br /> */}
             <br />
-            Being a Gen Z girl herself, she understands the struggles of girls
-            shopping online; endless scrolling and barely finding outfits that match
-            their vibe! Here, she clearly identified a gap in the market and decided
-            to build BAE.
+            We believe fashion is one of the biggest forms of self-expression and every girl deserves to wear outfits that look and feel like her. We want discovery to feel fun again and to bring both discovery and purchase together on one platform. We aim to scale this to India’s largest online shopping app.
           </p>
         </div>
 

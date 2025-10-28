@@ -49,19 +49,19 @@ export default function Section2() {
   return (
     <div ref={sectionRef} className="w-full h-screen bg-black relative overflow-hidden">
       {/* ✅ Top Scrolling Bar */}
-      <div className="w-full h-[80px] bg-[#FFD3DC] flex items-center overflow-hidden relative">
+      <div className="w-full h-[70px] md:h-[80px] bg-[#FFD3DC] flex items-center overflow-hidden relative ">
         <div className="marquee">
           <div className="marquee__inner">
-            <span>DOES THIS SOUND LIKE YOU? ☺</span>
-            <span>DOES THIS SOUND LIKE YOU? ☺</span>
-            <span>DOES THIS SOUND LIKE YOU? ☺</span>
-            <span>DOES THIS SOUND LIKE YOU? ☺</span>
+            <span>DOES THIS SOUND LIKE YOU? </span>
+            <span>DOES THIS SOUND LIKE YOU? </span>
+            <span>DOES THIS SOUND LIKE YOU? </span>
+            <span>DOES THIS SOUND LIKE YOU? </span>
           </div>
           <div className="marquee__inner">
-            <span>DOES THIS SOUND LIKE YOU? ☺</span>
-            <span>DOES THIS SOUND LIKE YOU? ☺</span>
-            <span>DOES THIS SOUND LIKE YOU? ☺</span>
-            <span>DOES THIS SOUND LIKE YOU? ☺</span>
+            <span>DOES THIS SOUND LIKE YOU? </span>
+            <span>DOES THIS SOUND LIKE YOU? </span>
+            <span>DOES THIS SOUND LIKE YOU? </span>
+            <span>DOES THIS SOUND LIKE YOU? </span>
           </div>
         </div>
       </div>
@@ -98,7 +98,7 @@ export default function Section2() {
             ${visible[1] ? "opacity-100 scale-100" : "opacity-0 scale-75"}
             w-[65%] sm:w-[55%] md:w-[34%] lg:w-[26%]
             ${isMobile
-              ? "left-[-1%] top-[15%]" // 📱 below and slightly right
+              ? "left-[-1%] top-[17%]" // 📱 below and slightly right
               : "left-[26%] top-[45%]"} // 💻 desktop layout
           `}
         />
@@ -111,7 +111,7 @@ export default function Section2() {
             ${visible[2] ? "opacity-100 scale-100" : "opacity-0 scale-75"}
             w-[60%] sm:w-[50%] md:w-[30%] lg:w-[24%]
             ${isMobile
-              ? "left-[-2%] top-[35%]" // 📱 diagonally lower right
+              ? "left-[-2%] top-[39%]" // 📱 diagonally lower right
               : "right-[9%] top-[14%]"} // 💻 desktop layout
           `}
         />
@@ -124,7 +124,7 @@ export default function Section2() {
             ${visible[3] ? "opacity-100 scale-100" : "opacity-0 scale-75"}
             w-[65%] sm:w-[55%] md:w-[32%] lg:w-[26%]
             ${isMobile
-              ? "left-[2%] bottom-[21%]" // 📱 last bubble near bottom right
+              ? "left-[2%] bottom-[16%]" // 📱 last bubble near bottom right
               : "right-[7%] bottom-[2%]"} // 💻 desktop layout
           `}
         />
