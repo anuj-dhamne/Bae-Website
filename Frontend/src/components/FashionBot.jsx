@@ -36,7 +36,7 @@ const useTypingEffect = (text, speed = 50, start = false) => {
 
 export default function FashionBot() {
   const text =
-    " Here are a few college outfit recommendations tailored to flatter your body type and aesthetic.";
+    "  Here are a few college outfit recommendations tailored to flatter your body type and aesthetic.";
 
   const [step, setStep] = useState(0);
   const { ref, inView } = useInView({
