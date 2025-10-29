@@ -13,7 +13,7 @@ const HeroSection = () => {
       <video
         className="absolute top-0 left-0 w-full h-full object-cover"
         src={sampleVideo}
-        playsInline
+        playsInlinez
         webkit-playsinline="true"
         muted
         autoPlay
@@ -31,7 +31,7 @@ const HeroSection = () => {
           <img
             src={logo}
             alt="Logo"
-            className="w-[120px] sm:w-[10px] md:w-[350px] h-auto mt-3"
+            className="w-[150px] sm:w-[10px] md:w-[350px]  h-[75px] md:h-auto mt-3"
           />
         </div>
 

@@ -5,7 +5,7 @@ export default function MeetBae() {
   return (
     <div className="flex flex-col overflow-hidden">
       {/* Top pink bar */}
-      <div className="h-[60px] sm:h-[78px] w-full bg-[#FFD3DC]" />
+      <div className="h-[30px] sm:h-[78px] w-full bg-[#FFD3DC]" />
 
       {/* Middle Section */}
       <div className="flex flex-col lg:flex-row w-full">
@@ -99,7 +99,7 @@ export default function MeetBae() {
       </div>
 
       {/* Bottom pink bar */}
-      <div className="h-[60px] sm:h-[78px] w-full bg-[#FFD3DC] z-10 relative" />
+      <div className="h-[30px] sm:h-[78px] w-full bg-[#FFD3DC] z-10 relative" />
     </div>
   );
 }

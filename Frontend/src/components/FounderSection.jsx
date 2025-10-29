@@ -1,6 +1,6 @@
 import React from "react";
 
-import founder from "../assets/founder.png";
+import founder from "../assets/new_ceo.jpg";
 import standing from "../assets/standing.png";
 import working from "../assets/working.png";
 
@@ -113,7 +113,7 @@ export default function FounderSection() {
         </div>
 
         {/* Two Images side by side */}
-        <div className="flex justify-center items-center gap-4 px-2">
+        {/* <div className="flex justify-center items-center gap-4 px-2">
           <img
             src={working}
             alt="Founder working"
@@ -123,6 +123,14 @@ export default function FounderSection() {
             src={standing}
             alt="Founder standing"
             className="w-[45%] object-cover rounded-lg shadow-md"
+          />
+        </div> */}
+
+         <div className="flex justify-center px-2">
+          <img
+            src={founder}
+            alt="Founder portrait"
+            className="w-[90%] sm:w-[70%] object-cover rounded-lg shadow-md"
           />
         </div>
 
@@ -149,11 +157,24 @@ export default function FounderSection() {
         </div>
 
         {/* Founder Portrait Image */}
-        <div className="flex justify-center px-2">
+        {/* <div className="flex justify-center px-2">
           <img
             src={founder}
             alt="Founder portrait"
             className="w-[90%] sm:w-[70%] object-cover rounded-lg shadow-md"
+          />
+        </div> */}
+
+        <div className="flex justify-center items-center gap-4 px-2">
+          <img
+            src={working}
+            alt="Founder working"
+            className="w-[45%] object-cover rounded-lg shadow-md"
+          />
+          <img
+            src={standing}
+            alt="Founder standing"
+            className="w-[45%] object-cover rounded-lg shadow-md"
           />
         </div>
       </div>

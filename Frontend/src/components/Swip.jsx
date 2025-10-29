@@ -9,7 +9,7 @@ export default function Swip() {
   return (
     <div className="w-full min-h-screen flex flex-col relative">
       {/* Top Bar */}
-      <div className="h-[78px] w-full bg-[#FFD3DC] z-10" />
+      <div className="h-[30px] w-full bg-[#FFD3DC] z-10" />
 
       {/* Main Section */}
       <div
@@ -99,7 +99,7 @@ export default function Swip() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="h-[78px] w-full bg-[#FFD3DC] z-10" />
+      <div className="h-[30px] sm:h-[78px] w-full bg-[#FFD3DC] z-10" />
     </div>
   );
 }
