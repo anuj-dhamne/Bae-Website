@@ -74,13 +74,13 @@ export default function FashionBot() {
         <div className="max-w-[800px] text-center lg:text-left mb-8 lg:mb-0">
           <h1 className="font-[Instrument_Serif] text-[#961B1E] text-[48px] sm:text-[65px] lg:text-[90px] leading-tight">
             Ask me <br />
-            <span className="italic text-[#961B1E]">anything</span>{" "}
+            <span className="italic text-[#961B1E]">Anything</span>{" "}
             <span className="not-italic">BOT</span>
           </h1>
           <p className="font-[DM_Sans] text-[#543B2E] text-[16px] sm:text-[20px] lg:text-[25px] mt-4">
             From celeb looks to daily outfits, get instant style advice. 
             <br className="hidden lg:block" />
-            Your fashion BFF whenever you’re stuck !
+            &nbsp;Your fashion BFF whenever you’re stuck!
           </p>
         </div>
 

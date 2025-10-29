@@ -31,15 +31,15 @@ export default function Footer() {
 
           {/* Social Media */}
           <div className="flex gap-6 justify-center">
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/shopwithbae_in/?igsh=MWpqZHRkbnBjdzhkbw%3D%3D&utm_source=qr#" target="_blank" rel="noopener noreferrer">
               <FaInstagram className="text-white text-2xl sm:text-3xl hover:scale-110 transition" />
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            {/* <a href="#" target="_blank" rel="noopener noreferrer">
               <FaLinkedin className="text-white text-2xl sm:text-3xl hover:scale-110 transition" />
             </a>
             <a href="#" target="_blank" rel="noopener noreferrer">
               <FaPinterest className="text-white text-2xl sm:text-3xl hover:scale-110 transition" />
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
@@ -62,12 +62,12 @@ export default function Footer() {
           >
             Contact us
           </Link>
-          <Link
+          {/* <Link
             to="/"
             className="text-white font-['Libre_Baskerville'] text-[16px] sm:text-[18px] md:text-[24px] hover:underline"
           >
             Privacy policy
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>

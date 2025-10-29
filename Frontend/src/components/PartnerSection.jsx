@@ -40,9 +40,7 @@ const PartnerSection = () => {
               fontSize: "clamp(14px, 2.5vw, 26px)",
             }}
           >
-            We’re building more than an e-commerce platform, we’re creating a
-            community of women who shop by personal style. Partner with us to
-            reach a curated audience, boost visibility, and grow your sales.
+           We’re building more than an e-commerce platform, we’re creating a community of young women who want to shop according to their personal style. Partner with us to reach a curated audience, boost visibility, and grow your sales! 
           </p>
 
           {/* Button */}
