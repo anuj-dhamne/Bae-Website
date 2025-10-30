@@ -1,7 +1,7 @@
 // src/components/HeroSection.jsx
 import React from "react";
 import sampleVideo from "../assets/HeroVideo.mp4";
-import logo from "../assets/new_logo_bae.png";
+import logo from "../assets/new_logo_bae.PNG";
 import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
