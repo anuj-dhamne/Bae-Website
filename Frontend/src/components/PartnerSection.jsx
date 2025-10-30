@@ -49,7 +49,7 @@ const PartnerSection = () => {
             style={{
               width: "clamp(140px, 50%, 340px)",
               height: "clamp(40px, 7vw, 60px)",
-              fontSize: "clamp(12px, 2vw, 20px)",
+              fontSize: "clamp(13.5px, 2vw, 20px)",
             }}
             onClick={() => {
               navigate("/contact");

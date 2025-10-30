@@ -49,8 +49,8 @@ export default function Section2() {
   return (
     <div ref={sectionRef} className="w-full  bg-black relative overflow-hidden">
       {/* ✅ Top Scrolling Bar */}
-      <div className="w-full h-[55px] md:h-[80px] bg-[#FFD3DC] flex items-center overflow-hidden relative ">
-        <div className="marquee">
+      <div className="w-full h-[48px] md:h-[80px] bg-[#FFD3DC] flex items-center overflow-hidden relative text">
+        <div className="marquee text-[14px] ">
           <div className="marquee__inner">
             <span>DOES THIS SOUND LIKE YOU? </span>
             <span>DOES THIS SOUND LIKE YOU? </span>

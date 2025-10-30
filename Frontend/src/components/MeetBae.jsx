@@ -81,7 +81,7 @@ export default function MeetBae() {
                   </div>
                 </div>
                 {i !== 3 && (
-                  <hr className="border-t border-[#65493B] w-full ml-4 sm:ml-7" />
+                  <hr className="border-t border-[#65493B] w-full ml-4 sm:ml-7 -mb-3" />
                 )}
               </div>
             ))}
@@ -99,7 +99,7 @@ export default function MeetBae() {
       </div>
 
       {/* Bottom pink bar */}
-      <div className="h-[30px] sm:h-[78px] w-full bg-[#FFD3DC] z-10 relative" />
+      {/* <div className="h-[30px] sm:h-[78px] w-full bg-[#FFD3DC] z-10 relative" /> */}
     </div>
   );
 }

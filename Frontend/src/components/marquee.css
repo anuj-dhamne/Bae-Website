@@ -21,8 +21,14 @@
 
 .marquee__inner span {
   margin-right: 2rem;
-  font-size: 24px;
+  font-size: 15px;
   font-weight: bold;
   font-family: "Libre Baskerville", serif;
   color: #961B1E;
+}
+
+@media (min-width: 768px) {
+  .marquee__inner span {
+    font-size: 24px; /* same as before for desktop */
+  }
 }

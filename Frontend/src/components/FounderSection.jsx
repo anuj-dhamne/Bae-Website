@@ -39,7 +39,7 @@ export default function FounderSection() {
           </div>
 
           {/* Right Images */}
-          <div className="flex flex-row items-end gap-6 mt-20">
+          {/* <div className="flex flex-row items-end gap-6 mt-20">
             <img
               src={working}
               alt="Founder working"
@@ -50,24 +50,45 @@ export default function FounderSection() {
               alt="Founder standing"
               className="w-[285px] h-[412px] object-cover rounded-lg shadow-md relative top-25"
             />
+          </div> */}
+
+           <div className="flex-shrink-0">
+            <img
+              src={founder}
+              alt="Founder portrait"
+              className="w-[639px] h-[575px] object-cover rounded-lg shadow-md relative top-32"
+            />
           </div>
         </div>
 
         {/* Vision and Mission Section */}
         <div className="flex flex-row justify-between items-center gap-10">
           {/* Left Image */}
-          <div className="flex-shrink-0">
+          {/* <div className="flex-shrink-0">
             <img
               src={founder}
               alt="Founder portrait"
               className="w-[639px] h-[575px] object-cover rounded-lg shadow-md"
+            />
+          </div> */}
+
+          <div className="flex flex-row items-end gap-8 mt-20">
+            <img
+              src={working}
+              alt="Founder working"
+              className="w-[285px] h-[412px] object-cover rounded-lg shadow-md relative -top-10"
+            />
+            <img
+              src={standing}
+              alt="Founder standing"
+              className="w-[285px] h-[412px] object-cover rounded-lg shadow-md relative "
             />
           </div>
 
           {/* Right Text */}
           <div className="flex-1 lg:pl-16">
             <h1
-              className="font-['Instrument_Serif'] text-[#961B1E] leading-tight mb-6"
+              className="font-['Instrument_Serif'] text-[#961B1E] leading-tight -ml-1 "
               style={{ fontSize: "clamp(36px, 6vw, 90px)" }}
             >
               VISION AND MISSION
@@ -102,8 +123,15 @@ export default function FounderSection() {
           >
             Asshna Punjabi (She/her)
           </h2>
+              <div className="flex justify-center px-2">
+          <img
+            src={founder}
+            alt="Founder portrait"
+            className="w-[90%] sm:w-[70%] object-cover rounded-lg shadow-md"
+          />
+        </div>
           <p
-            className="font-['DM_Sans'] text-[#282827] leading-relaxed"
+            className="font-['DM_Sans'] text-[#282827] leading-relaxed mt-5"
              style={{
               fontSize: "clamp(14px, 2.5vw, 26px)",
             }}
@@ -126,13 +154,13 @@ export default function FounderSection() {
           />
         </div> */}
 
-         <div className="flex justify-center px-2">
+         {/* <div className="flex justify-center px-2">
           <img
             src={founder}
             alt="Founder portrait"
             className="w-[90%] sm:w-[70%] object-cover rounded-lg shadow-md"
           />
-        </div>
+        </div> */}
 
         {/* Vision and Mission Text Box */}
         <div className="text-center px-4">
@@ -169,12 +197,12 @@ export default function FounderSection() {
           <img
             src={working}
             alt="Founder working"
-            className="w-[45%] object-cover rounded-lg shadow-md"
+            className="w-[140px] h-[240px] object-cover rounded-lg shadow-md"
           />
           <img
             src={standing}
             alt="Founder standing"
-            className="w-[45%] object-cover rounded-lg shadow-md"
+            className="w-[140px] h-[240px] object-cover rounded-lg shadow-md"
           />
         </div>
       </div>

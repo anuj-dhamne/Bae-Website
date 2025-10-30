@@ -1,7 +1,7 @@
 // src/components/HeroSection.jsx
 import React from "react";
 import sampleVideo from "../assets/HeroVideo.mp4";
-import logo from "../assets/logo.png";
+import logo from "../assets/new_logo_bae.png";
 import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
@@ -31,7 +31,7 @@ const HeroSection = () => {
           <img
             src={logo}
             alt="Logo"
-            className="w-[150px] sm:w-[10px] md:w-[350px]  h-[75px] md:h-auto mt-3"
+            className="w-[200px] sm:w-[10px] md:w-[350px]  h-[165px] md:h-auto mt-4 -ml-10"
           />
         </div>
 

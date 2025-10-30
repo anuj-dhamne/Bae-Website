@@ -7,32 +7,41 @@ import msg1 from "../assets/msg1.png";
 import msg2 from "../assets/msg2new_pic.png";
 import msg3 from "../assets/msg3.png";
 import logo from "../assets/gemini_logo.png";
-import model1 from "../assets/model8.png";
-import model2 from "../assets/model2.png";
-import model3 from "../assets/model3.png";
-import model4 from "../assets/model4.png";
-import model5 from "../assets/model5.png";
-import model6 from "../assets/model6.png";
-import model7 from "../assets/model7.png";
-import model8 from "../assets/model9.png";
+import model1 from "../assets/model8-removebg-preview.png";
+import model2 from "../assets/model2-removebg-preview.png";
+import model3 from "../assets/model3-removebg-preview.png";
+import model4 from "../assets/model4-removebg-preview.png";
+import model5 from "../assets/model5-removebg-preview.png";
+import model6 from "../assets/model6-removebg-preview.png";
+import model7 from "../assets/model7-removebg-preview.png";
+import model8 from "../assets/model9-removebg-preview.png";
 
 // Typing effect hook
 const useTypingEffect = (text, speed = 50, start = false) => {
   const [displayed, setDisplayed] = useState("");
+  const [isDone, setIsDone] = useState(false);
 
   useEffect(() => {
-    if (!start) return;
+    if (!start || isDone) return; // ✅ Prevent re-running after complete
+    setDisplayed(""); // reset once when starting new typing
     let i = 0;
+
     const interval = setInterval(() => {
       setDisplayed((prev) => prev + text.charAt(i));
       i++;
-      if (i >= text.length) clearInterval(interval);
+      if (i >= text.length) {
+        clearInterval(interval);
+        setIsDone(true);
+      }
     }, speed);
+
     return () => clearInterval(interval);
-  }, [text, speed, start]);
+  }, [start]); // ✅ remove text/speed dependencies
+  // keeps effect stable — only runs when start changes
 
   return displayed;
 };
+
 
 export default function FashionBot() {
   const text =
@@ -136,7 +145,7 @@ export default function FashionBot() {
       </div>
 
       {/* ---------- TYPING BAR ---------- */}
-      <div className="flex flex-row items-center justify-center gap-2 sm:gap-4 px-6 lg:px-24 mt-10 mb-6">
+      <div className="flex flex-row items-center justify-center gap-2 sm:gap-4 px-6 lg:px-24 mt-10 mb-8">
         <img
           src={logo}
           alt="logo"
@@ -150,13 +159,13 @@ export default function FashionBot() {
       </div>
 
       {/* ---------- SCROLLING MODELS ---------- */}
-      <div className="w-full h-[250px] sm:h-[300px] lg:h-[370px] overflow-hidden mt-4 relative">
+      <div className="w-full h-[250px] sm:h-[300px] lg:h-[370px] overflow-hidden  relative">
         <motion.div
-          className="flex gap-8 sm:gap-12 min-w-full"
+          className="flex  sm:gap-12 min-w-full"
           animate={{ x: ["0%", "-100%"] }}
           transition={{
             repeat: Infinity,
-            duration: isMobile ? 12 : 25, // ✅ Faster scroll on mobile
+            duration: isMobile ? 12 : 50, // ✅ Faster scroll on mobile
             ease: "linear",
           }}
         >
@@ -166,7 +175,7 @@ export default function FashionBot() {
                 key={idx}
                 src={model}
                 alt={`model-${idx}`}
-                className="h-[200px] sm:h-[270px] object-contain shrink-0"
+                className="h-[270px] sm:h-[300px] object-contain shrink-0 "
               />
             )
           )}
@@ -176,7 +185,7 @@ export default function FashionBot() {
                 key={`dup-${idx}`}
                 src={model}
                 alt={`model-${idx}`}
-                className="h-[200px] sm:h-[270px] object-contain shrink-0"
+                className="h-[270px] sm:h-[300px] object-contain shrink-0 "
               />
             )
           )}
