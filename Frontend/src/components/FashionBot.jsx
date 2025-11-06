@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 import profilePic from "../assets/dp.png";
-import msg1 from "../assets/msg1.png";
-import msg2 from "../assets/msg2new_pic.png";
-import msg3 from "../assets/msg3.png";
+import msg1 from "../assets/msg1_new.svg";
+import msg2 from "../assets/msg2_new.svg";
+import msg3 from "../assets/msg3_new.svg";
 import logo from "../assets/gemini_logo.png";
 import model1 from "../assets/model8-removebg-preview.png";
 import model2 from "../assets/model2-removebg-preview.png";
@@ -106,7 +106,7 @@ export default function FashionBot() {
 
           {/* Messages */}
           <div className="ml-[65px] sm:ml-[80px] flex flex-col items-start justify-end gap-2 
-                          h-[180px] sm:h-[220px] w-[85%] sm:w-[450px] overflow-hidden relative">
+                          h-[180px] sm:h-[250px] w-[85%] sm:w-[450px] overflow-hidden relative">
 
             {step >= 1 && (
               <motion.img
@@ -137,7 +137,7 @@ export default function FashionBot() {
                 initial={{ y: 60, opacity: 0, scale: 0.9 }}
                 animate={{ y: 0, opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
-                className="w-[70%] sm:w-[345px] h-[50px] sm:h-[70px]"
+                className="w-[70%] sm:w-[345px] h-[50px] sm:h-[70px] ml-1"
               />
             )}
           </div>
