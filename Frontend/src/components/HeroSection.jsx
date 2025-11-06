@@ -1,20 +1,33 @@
 // src/components/HeroSection.jsx
 import React from "react";
-import sampleVideo from "../assets/HeroVideo.mp4";
-import logo from "../assets/new_logo_bae.PNG";
 import { useNavigate } from "react-router-dom";
+import logo from "../assets/new_logo_bae.PNG";
+
+// Import both videos
+import desktopVideo from "../assets/bae_web_vdeo.mp4";
+import mobileVideo from "../assets/bae_mob_vdeo.mp4"; // <-- your new mobile version
 
 const HeroSection = () => {
   const navigate = useNavigate();
 
   return (
     <div className="relative w-full h-screen overflow-hidden">
-      {/* Background Video */}
+      {/* Background Videos */}
+      {/* Desktop Video */}
       <video
-        className="absolute top-0 left-0 w-full h-full object-cover"
-        src={sampleVideo}
-        playsInlinez
-        webkit-playsinline="true"
+        className="hidden sm:block absolute top-0 left-0 w-full h-full object-cover"
+        src={desktopVideo}
+        playsInline
+        muted
+        autoPlay
+        loop
+        controls={false}
+      />
+      {/* Mobile Video */}
+      <video
+        className="block sm:hidden absolute top-0 left-0 w-full h-full object-cover"
+        src={mobileVideo}
+        playsInline
         muted
         autoPlay
         loop
@@ -31,7 +44,7 @@ const HeroSection = () => {
           <img
             src={logo}
             alt="Logo"
-            className="w-[200px] sm:w-[10px] md:w-[350px]  h-[165px] md:h-auto mt-4 -ml-10"
+            className="w-[200px] sm:w-[250px] md:w-[350px] h-[165px] md:h-auto mt-4 -ml-10"
           />
         </div>
 
