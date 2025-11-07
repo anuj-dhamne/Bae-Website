@@ -7,10 +7,10 @@ import bubble1 from "../assets/bubble1.png";
 import bubble2 from "../assets/bubble2.png";
 import bubble3 from "../assets/bubble3.png";
 import bubble4 from "../assets/bubble4.png";
-import bubble3Mobile from "../assets/bubble3Mobile.png"; // mobile version
-import bubble1Mobile from "../assets/bubble1Mobile.png"; // mobile version
-import bubble2Mobile from "../assets/bubble2Mobile.png"; // mobile version
-import bubble4Mobile from "../assets/bubble4Mobile.png"; // mobile version
+import bubble3Mobile from "../assets/bubble_mob3.svg"; // mobile version
+import bubble1Mobile from "../assets/bubble_mob1.svg"; // mobile version
+import bubble2Mobile from "../assets/bubble_mob2.svg"; // mobile version
+import bubble4Mobile from "../assets/bubble_mob4.svg"; // mobile version
 
 import "./marquee.css";
 
@@ -109,9 +109,9 @@ export default function Section2() {
           alt="bubble3"
           className={`absolute transition-all duration-700 ease-out
             ${visible[2] ? "opacity-100 scale-100" : "opacity-0 scale-75"}
-            w-[60%] sm:w-[50%] md:w-[30%] lg:w-[24%]
+            w-[55%] sm:w-[50%] md:w-[30%] lg:w-[24%]
             ${isMobile
-              ? "left-[-2%] top-[43%]" // 📱 diagonally lower right
+              ? "left-[2%] top-[45%]" // 📱 diagonally lower right
               : "right-[9%] top-[14%]"} // 💻 desktop layout
           `}
         />
