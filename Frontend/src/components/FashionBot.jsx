@@ -42,7 +42,6 @@ const useTypingEffect = (text, speed = 50, start = false) => {
   return displayed;
 };
 
-
 export default function FashionBot() {
   const text =
     "  Here are a few college outfit recommendations tailored to flatter your body type and aesthetic.";
