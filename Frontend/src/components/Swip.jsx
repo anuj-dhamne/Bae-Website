@@ -44,7 +44,7 @@ export default function Swip() {
           />
 
           {/* Mobile Version (unchanged) */}
-          <div className="relative flex flex-col items-center justify-center md:hidden mb-5">
+          <div className="relative flex flex-col items-center justify-center md:hidden mb-8">
             {/* Vector Image - Mobile */}
             <img
               src={vectorImg}
