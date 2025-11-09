@@ -13,6 +13,7 @@ export default function Waitlist() {
     email: "",
     city: "",
     vibe: "",
+    customVibe: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -23,7 +24,10 @@ export default function Waitlist() {
   // ---------------------------
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   };
 
   // ---------------------------
@@ -34,32 +38,46 @@ export default function Waitlist() {
     setIsSubmitting(true);
     setStatus("");
 
+    console.log(" Form Data : ",formData);
+
     try {
-      // Example: Sending to Google Apps Script / Backend API
-      console.log("Formdata : ", formData);
+      // ✅ If vibe is "Other", use the customVibe field
+      const finalVibe =
+        formData.vibe === "Other" ? formData.customVibe : formData.vibe;
+
+      const dataToSend = {
+        ...formData,
+        vibe: finalVibe,
+        timestamp: new Date().toLocaleString(),
+      };
+
+      console.log("Data to send:", dataToSend);
+
+      // ✅ Google Apps Script Web App URL
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbwL6xqy3J--tHOyLHgugnieGm1kE1Bycx6U6EojrhIRuW_k_EYfERWTLHP_mM3KLxQqMw/exec", // Replace this
+        "https://script.google.com/macros/s/AKfycbxpbNtVV5X7L5atQAqwcNKtiVnfgFof_CyCzX2kMoOxn3P0WpnpWx0-XiTLNwzcplRY/exec",
         {
           method: "POST",
-          mode: "no-cors", // required for Google Apps Script
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
+          mode: "no-cors", // required for Google Sheets API
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(dataToSend),
         }
       );
-      console.log("response : ", response);
-      setStatus("Thank you! You’ve joined the waitlist.");
+
+      console.log("response:", response);
+      setStatus("✅ Thank you! You’ve joined the waitlist.");
+
       setFormData({
         name: "",
         phone: "",
         email: "",
         city: "",
         vibe: "",
+        customVibe: "",
       });
     } catch (error) {
       console.error("Error submitting form:", error);
-      setStatus("Something went wrong. Please try again later.");
+      setStatus("❌ Something went wrong. Please try again later.");
     } finally {
       setIsSubmitting(false);
     }
@@ -71,7 +89,7 @@ export default function Waitlist() {
   return (
     <div className="relative w-full min-h-screen flex items-center justify-center bg-white font-['DM_Sans'] overflow-hidden">
       {/* Right pink background */}
-      <div className="absolute right-0 top-0 h-full w-[35%] bg-[#FFE4EB] z-0 " />
+      <div className="absolute right-0 top-0 h-full w-[35%] bg-[#FFE4EB] z-0" />
 
       {/* Main Container */}
       <div className="relative z-10 flex flex-col lg:flex-row w-[90%] lg:w-[85%] justify-between items-center py-12 lg:py-16 gap-10">
@@ -119,7 +137,9 @@ export default function Waitlist() {
               required
             />
 
+            {/* City + Vibe */}
             <div className="flex gap-4">
+              {/* City dropdown */}
               <select
                 name="city"
                 value={formData.city}
@@ -145,24 +165,44 @@ export default function Waitlist() {
                 <option value="Others">Others</option>
               </select>
 
-              <select
-                name="vibe"
-                value={formData.vibe}
-                onChange={handleChange}
-                className="w-1/2 border-b border-[#8E8E8E] text-[14px] text-[#8E8E8E] bg-transparent pb-2 focus:outline-none"
-                required
-              >
-                <option value="">Vibe</option>
-                <option value="Old Money">Old Money</option>
-                <option value="Soft girl/Coquette">Soft girl/Coquette</option>
-                <option value="Clean Girl">Clean Girl</option>
-                <option value="Baddie">Baddie</option>
-                <option value="Street Style">Street Style</option>
-                <option value="Basic Girl">Basic Girl</option>
-                <option value="Basic Girl">Others</option>
-              </select>
+              {/* Vibe dropdown */}
+              <div className="w-1/2">
+                <select
+                  name="vibe"
+                  value={formData.vibe}
+                  onChange={handleChange}
+                  className="w-full border-b border-[#8E8E8E] text-[14px] text-[#8E8E8E] bg-transparent pb-2 focus:outline-none"
+                  required
+                >
+                  <option value="">Vibe</option>
+                  <option value="Old Money">Old Money</option>
+                  <option value="Soft girl/Coquette">
+                    Soft girl/Coquette
+                  </option>
+                  <option value="Clean Girl">Clean Girl</option>
+                  <option value="Baddie">Baddie</option>
+                  <option value="Street Style">Street Style</option>
+                  <option value="Basic Girl">Basic Girl</option>
+                  <option value="Other">Other</option>
+                </select>
+
+                {/* ✅ Custom input appears when 'Other' selected */}
+                {formData.vibe === "Other" && (
+                  <input
+                    type="text"
+                    name="customVibe"
+                    value={formData.customVibe}
+                    onChange={handleChange}
+                    placeholder="Enter your vibe"
+                    className="w-full mt-2 border-b border-[#8E8E8E] text-[14px] text-[#8E8E8E] pb-2 focus:outline-none"
+                    autoFocus
+                    required
+                  />
+                )}
+              </div>
             </div>
 
+            {/* Submit button */}
             <button
               type="submit"
               disabled={isSubmitting}

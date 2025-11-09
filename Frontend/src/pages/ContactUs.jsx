@@ -1,5 +1,4 @@
-import React, { useState, useRef } from "react";
-import { HiOutlineUpload } from "react-icons/hi";
+import React, { useState } from "react";
 import brandImg from "../assets/Partner.png";
 import mail from "../assets/mail.png";
 
@@ -7,7 +6,6 @@ export default function ContactUs() {
   const [price, setPrice] = useState(2500);
   const [status, setStatus] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const fileInputRef = useRef(null);
 
   // ✅ Manage form data
   const [formData, setFormData] = useState({
@@ -30,11 +28,6 @@ export default function ContactUs() {
     setPrice(e.target.value);
   };
 
-  // Handle upload box click
-  const handleUploadClick = () => {
-    fileInputRef.current.click();
-  };
-
   // ✅ Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -42,28 +35,26 @@ export default function ContactUs() {
     setStatus("");
 
     try {
-      const file = fileInputRef.current.files[0];
       const dataToSend = {
         ...formData,
         priceRange: price,
-        catalog: file ? file.name : "No file uploaded",
         timestamp: new Date().toLocaleString(),
       };
 
-      console.log(" Data to send : ",dataToSend);
+      console.log("Data to send:", dataToSend);
 
       // ✅ Replace below with your Google Apps Script Web App URL
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbxeJa7hlssySTqzwpEHaRrWRiEiHabOQOqt6eTw1tFX9IL5iCXj8BRWu_p-L3HdtKXt/exec",
+        "https://script.google.com/macros/s/AKfycby1z_1e6i8G_1qNIBgHkatDcYAQvyf1jac-sk3MpxRcheP2H9OLJ86bgmt90PfsczL0/exec",
         {
           method: "POST",
-          mode: "no-cors", // required for Google Sheets API
+          mode: "no-cors",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(dataToSend),
         }
       );
 
-      console.log("response : ",response);
+      console.log("response:", response);
 
       setStatus("✅ Thank you! Your brand has been registered successfully.");
       setFormData({
@@ -75,7 +66,6 @@ export default function ContactUs() {
         email: "",
       });
       setPrice(2500);
-      if (fileInputRef.current) fileInputRef.current.value = "";
     } catch (error) {
       console.error("Error submitting form:", error);
       setStatus("❌ Something went wrong. Please try again later.");
@@ -105,7 +95,6 @@ export default function ContactUs() {
             onSubmit={handleSubmit}
             className="flex flex-col gap-6 mt-8 w-full max-w-[520px]"
           >
-            {/* Input Fields */}
             <input
               type="text"
               name="brandName"
@@ -193,25 +182,6 @@ export default function ContactUs() {
               </div>
             </div>
 
-            {/* Upload Box */}
-            <div
-              onClick={handleUploadClick}
-              className="border border-dashed border-[#8E8E8E] rounded-lg h-[110px] flex flex-col justify-center items-center cursor-pointer hover:bg-[#fff8fa] transition"
-            >
-              <HiOutlineUpload className="text-[#8E8E8E] text-2xl mb-2" />
-              <p className="text-[#8E8E8E] text-[14px]">Upload Catalog</p>
-              <input
-                ref={fileInputRef}
-                type="file"
-                className="hidden"
-                accept=".pdf,.jpg,.png,.docx"
-              />
-            </div>
-
-            <p className="text-[#8E8E8E] text-[13px] -mt-3">
-              Attach file. File size of your documents should not exceed 10MB
-            </p>
-
             {/* Submit Button */}
             <button
               type="submit"
@@ -267,7 +237,7 @@ export default function ContactUs() {
           <img
             src={brandImg}
             alt="Brand Registration"
-            className="rounded-2xl w-[460px] lg:w-[520px] object-cover "
+            className="rounded-2xl w-[460px] lg:w-[520px] object-cover"
           />
         </div>
       </div>
